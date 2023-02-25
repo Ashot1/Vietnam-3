@@ -1,0 +1,67 @@
+.sliderWrapper {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+    height: 55vw;
+    position: relative;
+    background: inherit;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.SliderButton {
+    background: black;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 5px;
+    border-radius: 15%;
+}
+
+.points {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.ButtonsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    .slider {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .SliderButton {
+        width: 40px;
+        height: 11px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .slider {
+        height: 40vw;
+    }
+
+}

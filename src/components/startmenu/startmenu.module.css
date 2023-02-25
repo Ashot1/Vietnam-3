@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.Startmenu {
+    width: min(1480px, 90%);
+    display: flex;
+    position: relative;
+    margin-top: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+@media (min-width: 2300px) {
+    .Startmenu {
+        margin-left: 15%;
+    }
+}
+
+
+.Block {
+    text-decoration: none;
+    width: clamp(400px, 45%, 700px);
+    height: 300px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: inherit;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-size: 25px;
+    box-shadow: 0 0 10px black;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .Startmenu {
+        width: 97%;
+        margin-left: 1.5%;
+    }
+
+    .Block {
+        width: 100%;
+        height: 60vw;
+    }
+}
+
+@media (max-width: 810px) and (min-width: 500px) {
+    .Startmenu {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .Block {
+        width: 80%;
+        height: 50vw;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 810px) and (max-width: 1110px) {
+    .Block {
+        width: 47%;
+        height: 30vw;
+        margin-left: 2.5%;
+    }
+
+    .Startmenu {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+.Block p {
+    z-index: 2;
+    color: rgb(194, 193, 193);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.BlockCover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.Block:hover .BlockCover {
+    opacity: 0.5;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.Block:hover>p {
+    color: white;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.Block:hover {
+    box-shadow: 0 0 20px black;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
