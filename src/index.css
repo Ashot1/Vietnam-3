@@ -5,11 +5,14 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: hidden;
+    touch-action: manipulation;
+    user-select: none;
 }
 
 html {
     min-height: 100vh;
     min-width: 100vw;
+    scroll-behavior: smooth;
 }
 
 #WebBody {
