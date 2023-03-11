@@ -1,0 +1,8 @@
+.modalWindow {
+    border: none;
+
+}
+
+.modalWindow::backdrop {
+    background: black;
+}

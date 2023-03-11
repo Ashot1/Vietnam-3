@@ -1,34 +1,30 @@
 .block_visible {
-    animation: BlockOn .5s;
-    -webkit-animation: BlockOn .5s;
+    animation: BlockOn .35s;
+    -webkit-animation: BlockOn .35s;
 }
 
 .block_close {
-    animation: BlockOff .5s;
-    -webkit-animation: BlockOff .5s;
+    animation: BlockOff .35s;
+    -webkit-animation: BlockOff .35s;
 }
 
 @keyframes BlockOn {
     0% {
         opacity: 0;
-        transform: scale(0.9);
     }
 
     100% {
         opacity: 1;
-        transform: scale(1);
     }
 }
 
 @keyframes BlockOff {
     0% {
         opacity: 1;
-        transform: scale(1);
     }
 
     100% {
         opacity: 0;
-        transform: scale(0.9);
     }
 }
 
@@ -37,3 +33,4 @@
     padding-top: 0.1px;
     min-height: 100vh;
 }
+

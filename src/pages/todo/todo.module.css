@@ -1,0 +1,25 @@
+
+.main {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    width: max(500px, 80%);
+}
+
+.TodoUl {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(400px, 40%, 700px));
+    gap: 20px;
+}
+
+.TodoLi {
+}
+

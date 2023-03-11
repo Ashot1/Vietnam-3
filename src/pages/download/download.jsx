@@ -27,7 +27,7 @@ export default function DownloadPage() {
 					{Downloads.map(item => {
 						return (
 							<li key={item.name} className={styles.Download}>
-								<a href={item.url}>
+								<a href={item.url} download>
 									<img src={item.img}/>
 									<p>{item.name}</p>
 									<span>{item.type}</span>

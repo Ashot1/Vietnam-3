@@ -2,14 +2,23 @@
 
 .header {
     position: fixed;
-    width: 100%;
-    height: 53px;
+    width: max(350px, 55%);
+    height: 60px;
     background: white;
     display: flex;
     flex-direction: row;
     box-shadow: 0 0 10px rgba(212, 212, 212, 0.815);
     user-select: none;
     z-index: 5;
+    border-radius: 15px;
+    margin-left: 22.5%;
+    margin-top: 10px;
+}
+
+@media (max-width: 525px) {
+    .header {
+        margin-left: 9%;
+    }
 }
 
 .logoNamePosition {
@@ -59,7 +68,7 @@
     width: 30px;
     height: 45px;
     margin-left: 35px;
-    margin-top: 3px;
+    margin-top: 7px;
     display: flex;
     align-items: center;
     cursor: pointer;
