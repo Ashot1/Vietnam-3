@@ -1,23 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
 
 .header {
-    position: fixed;
     width: max(350px, 55%);
     height: 60px;
     background: white;
     display: flex;
     flex-direction: row;
     box-shadow: 0 0 10px rgba(212, 212, 212, 0.815);
-    user-select: none;
-    z-index: 5;
     border-radius: 15px;
-    margin-left: 22.5%;
-    margin-top: 10px;
+    user-select: none;
+    position: relative;
 }
+
+.headerWrapper {
+    position: fixed;
+    z-index: 5;
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
 
 @media (max-width: 525px) {
     .header {
-        margin-left: 6%;
+        width: 90%;
     }
 }
 
@@ -72,6 +79,12 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+@media (max-width: 525px) {
+    .menuburgerWrapper {
+        margin-left: 7%;
+    }
 }
 
 .menuburgerWrapper:hover .menuburger,
