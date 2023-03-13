@@ -86,42 +86,6 @@
     -o-transition: 0.4s;
 }
 
-.buttonSRM:hover,
-.buttonSRMActive {
-    box-shadow: 0 0 20px rgb(177, 78, 78);
-    background: rgb(180, 89, 89);
-}
-
-.buttonConsole:hover,
-.buttonConsoleActive {
-    box-shadow: 0 0 20px rgb(24, 185, 18);
-    background: rgb(24, 185, 18);
-}
-
-.buttonCalc:hover,
-.buttonCalcActive {
-    box-shadow: 0 0 20px rgb(223, 201, 5);
-    background: rgb(223, 201, 5);
-}
-
-.buttonSettings:hover,
-.buttonSettingsActive {
-    box-shadow: 0 0 20px rgb(13, 162, 199);
-    background: rgb(13, 162, 199);
-}
-
-.buttonDownload:hover,
-.buttonDownloadActive {
-    box-shadow: 0 0 20px rgb(152, 59, 196);
-    background: rgb(152, 59, 196);
-}
-
-.buttonTodo:hover,
-.buttonTodoActive {
-    box-shadow: 0 0 20px rgb(196, 137, 59);
-    background: rgb(196, 137, 59);
-}
-
 .button_img {
     width: 46px;
     height: 46px;
@@ -134,12 +98,7 @@
 }
 
 .button:hover .button_img,
-.buttonDownloadActive img,
-.buttonSettingsActive img,
-.buttonCalcActive img,
-.buttonConsoleActive img,
-.buttonSRMActive img,
-.buttonTodoActive img {
+.buttonActive img {
     -webkit-filter: invert(100%);
     filter: invert(100%);
     width: 40px;
@@ -166,13 +125,14 @@
 
     .menuButtons {
         display: flex;
-        width: clamp(220px, 70%, 300px);
+        width: clamp(220px, 80%, 300px);
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         background: white;
         height: 100%;
-        padding: 0;
         box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .button {
@@ -181,6 +141,7 @@
         margin-top: 5px;
         flex-grow: 5;
     }
+
 
     @keyframes MenuOpen {
         0% {
@@ -214,12 +175,7 @@
     }
 
     .button:hover .button_img,
-    .buttonDownloadActive img,
-    .buttonSettingsActive img,
-    .buttonCalcActive img,
-    .buttonConsoleActive img,
-    .buttonSRMActive img,
-    .buttonTodoActive img {
+    .buttonActive img {
         -webkit-filter: invert(100%);
         filter: invert(100%);
         width: 28px;

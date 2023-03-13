@@ -22,7 +22,7 @@
 }
 
 
-@media (max-width: 525px) {
+@media (max-width: 768px) {
     .header {
         width: 90%;
     }

@@ -79,7 +79,7 @@
 
 @media (max-width: 800px) {
     .content {
-        margin-top: 50px;
+        margin-top: 60px;
         width: 95%;
     }
 
@@ -87,7 +87,7 @@
 
 @media (max-width: 500px) {
     .content {
-        margin-top: 100px;
+        margin-top: 200px;
     }
 
 }
