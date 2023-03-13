@@ -64,52 +64,6 @@
     padding-left: 25%;
 }
 
-.button {
-    border: none;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: 41px;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-    cursor: pointer;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
-}
-
-.button_img {
-    width: 46px;
-    height: 46px;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
-    pointer-events: none;
-}
-
-.button:hover .button_img,
-.buttonActive img {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-    width: 40px;
-    height: 40px;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
-}
-
 
 @media (max-width: 768px) {
     .menu {
@@ -135,14 +89,6 @@
         padding-right: 10px;
     }
 
-    .button {
-        width: 50px;
-        height: 40px;
-        margin-top: 5px;
-        flex-grow: 5;
-    }
-
-
     @keyframes MenuOpen {
         0% {
             transform: translateY(-50px);
@@ -163,27 +109,4 @@
         }
     }
 
-    .button_img {
-        width: 32px;
-        height: 32px;
-        transition: 0.4s;
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -ms-transition: 0.4s;
-        -o-transition: 0.4s;
-        pointer-events: none;
-    }
-
-    .button:hover .button_img,
-    .buttonActive img {
-        -webkit-filter: invert(100%);
-        filter: invert(100%);
-        width: 28px;
-        height: 28px;
-        transition: 0.4s;
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -ms-transition: 0.4s;
-        -o-transition: 0.4s;
-    }
 }
