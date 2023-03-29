@@ -1,9 +1,11 @@
 import styles from "./todo.module.css";
 import {useState} from "react";
+import MarksList from "../../components/MarksList/MarksList";
+import TodoList from "../../components/TodoList/TodoList";
 
 export default function TodoPage(props) {
-	const [ModalState, setModalState] = useState(false)
-	const [Todos, setTodos] = useState([
+	const [Content, setContent] = useState('Marks')
+	const [Marks, setMarks] = useState([
 		{
 			id: 1,
 			title: "Huy",
@@ -15,17 +17,7 @@ export default function TodoPage(props) {
 			isActive: false
 		},
 		{
-			id: 2,
-			title: "Huy",
-			content: "\n" +
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
-				"\todio quas quia, quis ratione ullam veniam voluptas. Doloremque quo repellat similique soluta veritatis!\n" +
-				"Dolorem ea illo officia pariatur quam vero voluptatibus. A accusamus ad atque consectetur consequuntur dolorem\n" +
-				"\texpedita nam recusandae sit totam! Dolore ex iure porro praesentium soluta. Cum eligendi mollitia recusandae.",
-			isActive: false
-		},
-		{
-			id: 3,
+			id: 12,
 			title: "Huy2",
 			content: "\n" +
 				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
@@ -35,7 +27,7 @@ export default function TodoPage(props) {
 			isActive: false
 		},
 		{
-			id: 4,
+			id: 13,
 			title: "Huy3",
 			content: "\n" +
 				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
@@ -43,46 +35,57 @@ export default function TodoPage(props) {
 				"Dolorem ea illo officia pariatur quam vero voluptatibus. A accusamus ad atque consectetur consequuntur dolorem\n" +
 				"\texpedita nam recusandae sit totam! Dolore ex iure porro praesentium soluta. Cum eligendi mollitia recusandae.",
 			isActive: false
-		}
+		},
+		{
+			id: 15,
+			title: "Huy",
+			content: "\n" +
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
+				"\todio quas quia, quis ratione ullam veniam voluptas. Doloremque quo repellat similique soluta veritatis!\n" +
+				"Dolorem ea illo officia pariatur quam vero voluptatibus. A accusamus ad atque consectetur consequuntur dolorem\n" +
+				"\texpedita nam recusandae sit totam! Dolore ex iure porro praesentium soluta. Cum eligendi mollitia recusandae.",
+			isActive: false
+		},
 	])
+	const [Todos, setTodos] = useState([
+		{
+			id: 1,
+			content:
+				"Negri pidorasi",
+			isChecked: false
+		},
+	])
+	
+	const SetMarks = () => {
+		setContent('Marks')
+	}
+	
+	const SetTodos = () => {
+		setContent('Todos')
+	}
 	
 	return (
 		<main className={styles.main}>
 			<div className={styles.content}>
-				<Todolist todo={Todos}/>
+				<Menu Content={Content} SetMarks={SetMarks} SetTodos={SetTodos}/>
+				{Content === 'Marks' ? <MarksList marks={Marks}/> : <TodoList todo={Todos}/>}
 			</div>
 		</main>
 	);
 }
 
-function Todolist(props) {
-	const List = props.todo
-	
-	
-	if (List.length === 0) {
-		return (
-			<p className={styles.CleanList}>Список пуст</p>
-		)
-	}
-	
-	const HoverEffect = (e) => {
-		const x = e.clientX - e.target.offsetLeft,
-			y = e.clientY - e.target.offsetTop
-		
-		e.target.style.setProperty("--mouse-x", `${x}px`)
-		e.target.style.setProperty("--mouse-y", `${y}px`)
-	}
-	
+
+function Menu({Content, SetMarks, SetTodos}) {
 	return (
-		<ul className={styles.TodoUl}>
-			{List.map(todo => {
-				return (
-					<li key={todo.id} className={styles.TodoLi} onMouseMove={HoverEffect}>
-						<h1>{todo.title}</h1>
-						<p>{todo.content}</p>
-					</li>
-				)
-			})}
-		</ul>
+		<span className={styles.Menu}>
+					<button
+						className={Content === 'Marks' ? `${styles.Active}` : styles.UnActive}
+						onClick={SetMarks}
+					>Заметки</button>
+					<button
+						className={Content === 'Todos' ? styles.Active : styles.UnActive}
+						onClick={SetTodos}
+					>Список Задач</button>
+		</span>
 	)
 }

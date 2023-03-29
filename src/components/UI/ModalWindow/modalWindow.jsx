@@ -1,16 +1,18 @@
 import styles from './modalWindow.module.css'
-import {useEffect, useRef} from "react";
+import {useRef} from "react";
 
-export default function ModalWindow(props) {
+export default function ModalWindow({CloseSetting, children, width, height}) {
 	const modalRef = useRef()
 	
-	useEffect(() => {
-		modalRef.current.showModal()
-	}, [])
-	
 	return (
-		<dialog className={styles.modalWindow} ref={modalRef}>
-		
-		</dialog>
+		<div className={styles.modalWindow} ref={modalRef} onClick={CloseSetting}>
+			<div
+				className={styles.content}
+				onClick={(e) => e.stopPropagation()}
+				style={{width: width, height: height}}
+			>
+				{children}
+			</div>
+		</div>
 	);
 }

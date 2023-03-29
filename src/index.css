@@ -18,3 +18,16 @@ html {
 #WebBody {
     min-height: 100vh;
 }
+
+body::-webkit-scrollbar {
+    width: 12px; /* ширина всей полосы прокрутки */
+}
+
+body::-webkit-scrollbar-track {
+    background: none; /* цвет зоны отслеживания */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.43); /* цвет бегунка */
+    border-radius: 1px; /* округлось бегунка */
+}

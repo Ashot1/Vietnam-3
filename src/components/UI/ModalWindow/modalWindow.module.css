@@ -1,8 +1,15 @@
 .modalWindow {
-    border: none;
-
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39, 39, 39, 0.452);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    position: fixed;
+    display: grid;
+    place-items: center;
 }
 
-.modalWindow::backdrop {
-    background: black;
+.content {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
 }

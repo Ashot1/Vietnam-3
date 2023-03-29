@@ -1,0 +1,33 @@
+
+.background {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.background div {
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(90deg, #babb73, #f5984d, #f57a7a);
+    -webkit-animation: backgroundCalc 5s linear infinite;
+    animation: backgroundCalc 5s linear infinite;
+    margin-left: -140px;
+    margin-top: -90px;
+}
+
+
+@keyframes backgroundCalc {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+
+    }
+}

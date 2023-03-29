@@ -45,6 +45,10 @@
     transition: 0.4s;
 }
 
+.DownloadList:hover > :not(:hover) {
+    opacity: 0.6;
+}
+
 
 .Download p {
     margin-left: 15px;
@@ -89,5 +93,10 @@
     .content {
         margin-top: 200px;
     }
+}
 
+@media (max-width: 375px) {
+    .content {
+        margin-top: 375px;
+    }
 }

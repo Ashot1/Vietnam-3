@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+.TodoUl {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    background: var(--backgroundC);
+    border-radius: 15px;
+}
+
+.TodoLi {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    background: rgb(242, 242, 242);
+    border-radius: 7px;
+}
+
+.TodoLi input {
+    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 768px) and (min-width: 500px) {
+    .TodoUl {
+        grid-template-columns: repeat(auto-fit, clamp(225px, 30%, 700px));
+    }
+}
+
+@media (max-width: 500px) {
+
+    .TodoUl {
+        grid-template-columns: repeat(auto-fit, clamp(160px, 100%, 160px));
+    }
+}
+
+@media (max-width: 300px) {
+    .TodoUl {
+        grid-template-columns: repeat(auto-fit, clamp(160px, 90%, 300px));
+    }
+}

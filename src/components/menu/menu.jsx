@@ -1,12 +1,5 @@
 import styles from './menu.module.css'
 import {CSSTransition} from "react-transition-group";
-
-import SRM from './image/chinaIco.png'
-import Console from './image/command-line.png'
-import Calc from './image/calculator.png'
-import Settings from './image/free-icon-settings-455515.png'
-import Download from './image/icon-download-6219312.png'
-import Todo from './image/todolist.png'
 import MenuLinkButtons from "../UI/ButtonMenu/MenuLinkButtons";
 
 
@@ -24,34 +17,25 @@ export default function Menu(props) {
 		>
 			<div className={styles.menu}>
 				<div className={styles.menuButtons}>
-					<MenuLinkButtons key={1} src={SRM}
+					<MenuLinkButtons key={1} src='/images/menu/chinaIco.png'
 					                 title="Social Rating Miner"
 					                 linkRouting="SocialRatingMiner"
-					                 place="MenuLeft"
 					                 ActiveColor="rgb(177, 78, 78)"/>
-					<MenuLinkButtons key={2} src={Console}
+					<MenuLinkButtons key={2} src='/images/menu/command-line.png'
 					                 title="Console"
 					                 linkRouting="Console"
-					                 place="MenuLeft"
 					                 ActiveColor="rgb(24, 185, 18)"/>
-					<MenuLinkButtons key={3} src={Calc}
+					<MenuLinkButtons key={3} src='/images/menu/calculator.png'
 					                 title="Calculator"
 					                 linkRouting="Calculator"
-					                 place="MenuLeft"
 					                 ActiveColor="rgb(223, 201, 5)"/>
-					<MenuLinkButtons key={4} src={Settings}
-					                 title="Settings"
-					                 linkRouting="Settings"
-					                 place="MenuLeft"
-					                 ActiveColor="rgb(13, 162, 199)"/>
-					<MenuLinkButtons key={5} src={Download}
+					<MenuLinkButtons key={4} src='/images/menu/download.png'
 					                 title="Download"
 					                 linkRouting="Download"
-					                 place="MenuLeft"
 					                 ActiveColor="rgb(152, 59, 196)"/>
-					<MenuLinkButtons key={6} src={Todo}
-					                 title="Todo list" linkRouting="Todo"
-					                 place="MenuLeft"
+					<MenuLinkButtons key={5} src='/images/menu/todolist.png'
+					                 title="Todo list"
+					                 linkRouting="Todo"
 					                 ActiveColor="rgb(196, 137, 59)"/>
 				</div>
 			</div>

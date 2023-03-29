@@ -1,9 +1,7 @@
 .menu {
     position: fixed;
-    width: 100px;
+    width: 80px;
     height: 100%;
-    background: white;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
     z-index: 6;
     display: flex;
     align-items: center;
@@ -58,10 +56,13 @@
 
 .menuButtons {
     width: 100px;
-    height: 600px;
     list-style-type: none;
-    padding: 0;
-    padding-left: 25%;
+    padding-left: 15px;
+    background: white;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-bottom: 50px;
 }
 
 
@@ -87,6 +88,8 @@
         box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
         padding-left: 10px;
         padding-right: 10px;
+        padding-bottom: 0;
+        border-top-right-radius: 0;
     }
 
     @keyframes MenuOpen {

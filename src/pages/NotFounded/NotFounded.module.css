@@ -1,12 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
 .main {
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: 55px;
-}
-
-.content {
-    width: max(500px, 80%);
-    height: 100px;
+    margin-top: 155px;
+    font-family: 'Source Code Pro', monospace;
 }
