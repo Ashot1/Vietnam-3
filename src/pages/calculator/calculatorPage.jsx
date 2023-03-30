@@ -12,6 +12,7 @@ export default memo(function CalculatorPage(props) {
 		setHistory([...History, value])
 	}
 	
+	
 	return (
 		<main className={styles.main}>
 			<div className={styles.content}>

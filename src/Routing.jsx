@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import StartPage from "./pages/start/startPage";
 import Slider from "./components/slider/slider";
 import Startmenu from "./components/startmenu/startmenu";
@@ -46,6 +46,21 @@ export default function Routing(props) {
 	])
 	
 	const location = useLocation()
+	
+	useEffect(() => {
+		document.title = location.pathname === '/Calculator'
+			? 'V-Calculator'
+			: location.pathname === '/Console'
+				? 'V-Console'
+				: location.pathname === '/Download'
+					? 'V-Download'
+					: location.pathname === '/SocialRatingMiner'
+						? 'V-Social Rating Miner'
+						: location.pathname === '/Todo'
+							? 'V-Todo/Marks'
+							: 'Vietnam 3'
+		
+	}, [location.pathname])
 	
 	return (
 		<TransitionGroup>

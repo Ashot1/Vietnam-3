@@ -32,30 +32,6 @@ export default function Slider() {
 		}
 	}, [SlideNumber])
 	
-	
-	// const SliderTouch = document.querySelector('#Slider')
-	// let TouchX,
-	//     TouchX2,
-	//     MouseX,
-	//     MouseX2
-	// //mobile swipe
-	// SliderTouch.addEventListener('touchstart', (e) => TouchX = e.touches[0].clientX)
-	// SliderTouch.addEventListener('touchmove', (e) => TouchX2 = TouchX - e.touches[0].clientX > 0 ? SlideNumber + 1 : SlideNumber - 1)
-	// SliderTouch.addEventListener('touchend', () => {
-	//     if (!TouchX || 0 === TouchX.length) return;
-	//     setSlideNumber(TouchX2)
-	// })
-	
-	
-	// // pc swipe
-	// SliderTouch.addEventListener('mousedown', (e) => MouseX = e.clientX)
-	// SliderTouch.addEventListener('mousemove', (e) => MouseX2 = MouseX - e.clientX > 0 ? SlideNumber + 1 : SlideNumber - 1)
-	// SliderTouch.addEventListener('mouseup', () => {
-	//     if (!MouseX || 0 === MouseX.length) return;
-	//     setSlideNumber(MouseX2)
-	// })
-	
-	
 	// Check slide != 7
 	if (SlideNumber == image.length) {
 		setSlideNumber(0)

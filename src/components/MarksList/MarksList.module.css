@@ -75,14 +75,21 @@
 }
 
 @media (max-width: 500px) {
-
     .TodoUl {
-        grid-template-columns: repeat(auto-fit, clamp(160px, 100%, 160px));
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .TodoLi p {
+        -webkit-line-clamp: 4;
+    }
+
+    .TodoLi {
+        height: 160px;
     }
 }
 
 @media (max-width: 320px) {
     .TodoUl {
-        grid-template-columns: repeat(auto-fit, clamp(160px, 90%, 300px));
+        grid-template-columns: repeat(1, auto);
     }
 }
