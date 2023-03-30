@@ -69,7 +69,7 @@
 @media (max-width: 768px) {
     .menu {
         width: 100%;
-        height: 50px;
+        height: 60px;
         z-index: 3;
         margin-top: 70px;
         background: none;
@@ -112,4 +112,10 @@
         }
     }
 
+}
+
+@media (max-width: 320px) {
+    .menu {
+        height: 50px
+    }
 }

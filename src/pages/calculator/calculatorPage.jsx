@@ -17,9 +17,9 @@ export default memo(function CalculatorPage(props) {
 			<div className={styles.content}>
 				<Calculator History={HistoryMove} ChangedHistory={ChangeHistory}/>
 				<List>
-					{History.map((obj) => {
+					{History.map((obj, index) => {
 						return (
-							<li key={obj.res} onClick={() => {
+							<li key={index} onClick={() => {
 								setChangeHistory(obj.nums)
 							}}>
 								{obj.nums} = {obj.res}

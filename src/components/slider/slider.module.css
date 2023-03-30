@@ -45,17 +45,22 @@
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .SliderButton {
-        width: 33px;
-        height: 8px;
-        margin-right: 10px;
-    }
-}
 
 @media (min-width: 1300px) {
     .slider {
         height: 40vw;
     }
 
+}
+
+@media (max-width: 768px) {
+    .SliderButton {
+        width: 33px;
+        height: 8px;
+        margin-right: 10px;
+    }
+
+    .slider {
+        height: 70vw;
+    }
 }

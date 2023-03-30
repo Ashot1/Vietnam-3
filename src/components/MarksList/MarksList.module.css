@@ -81,7 +81,7 @@
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 320px) {
     .TodoUl {
         grid-template-columns: repeat(auto-fit, clamp(160px, 90%, 300px));
     }

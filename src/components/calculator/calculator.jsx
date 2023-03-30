@@ -6,13 +6,18 @@ import {memo, useCallback, useEffect, useState} from "react";
 
 export default function Calculator({History, ChangedHistory}) {
 	
-	const [Calculator, SetCalculator] = useState({CalcInput: '', Result: '0'})
+	const [Calculator, SetCalculator] = useState('')
+	const [Result, setResult] = useState('0')
 	const [InputFZ, setInputFZ] = useState(1)
 	const ops = ['C', '*', '/', '«', '-', '+', '.', '(', ')']
 	
+	const changeInput = () => {
+		setInputFZ(Calculator.length > 16 ? Calculator.length / 16 : 1)
+	}
+	
 	useEffect(() => {
 		changeInput()
-	}, [Calculator.CalcInput])
+	}, [Calculator])
 	
 	const Calculate = (value) => {
 		return (new Function('return (' + value + ')')());
@@ -28,7 +33,7 @@ export default function Calculator({History, ChangedHistory}) {
 		}
 		
 		for (let i = 0; i < huy.length; i++) {
-			if (huy[i] === '(' && typeof huy[i - 1] == 'number') {
+			if ((huy[i] === '(' && typeof huy[i - 1] == 'number') || (huy[i] === '(' && huy[i - 2] === ')')) {
 				huy.splice(i, 0, '*');
 			}
 			if (huy[i] === ')' && typeof huy[i + 1] == 'number') {
@@ -37,66 +42,66 @@ export default function Calculator({History, ChangedHistory}) {
 		}
 		
 		if (huy.indexOf('=') > 0) huy[huy.indexOf('=')] = ''
+		console.log(huy)
 		
 		return Calculate(huy.join('')).toString()
 	}, [])
 	
-	const changeInput = () => {
-		setInputFZ(Calculator.CalcInput.length > 16 ? Calculator.CalcInput.length / 16 : 1)
-	}
 	
 	const resultBtn = async () => {
-		let result = GetResult(Calculator.CalcInput)
-		await SetCalculator({...Calculator, Result: result})
-		await History({nums: Calculator.CalcInput, res: result})
-		await SetCalculator({...Calculator, CalcInput: result})
+		let result = GetResult(Calculator)
+		await setResult(result)
+		await History({nums: Calculator, res: result})
+		await SetCalculator(result)
 	}
 	const ChangeNumber = (value) => {
 		const btnData = value.target.innerText
-		SetCalculator({...Calculator, CalcInput: Calculator.CalcInput + btnData})
+		SetCalculator(Calculator + btnData)
+		setResult(GetResult(Calculator + btnData))
 	}
 	
 	const change = (value) => {
 		const btnData = value.target.innerText
 		if (btnData === '(') {
-			SetCalculator({...Calculator, CalcInput: Calculator.CalcInput + btnData})
+			SetCalculator(Calculator + btnData)
 		}
 		if (btnData === ')') {
-			let Condition = (!ops.includes(Calculator.CalcInput.slice(-1)) && Calculator.CalcInput !== '') || Calculator.CalcInput.slice(-1) === ')'
+			let Condition = (!ops.includes(Calculator.slice(-1)) && Calculator !== '') || Calculator.slice(-1) === ')'
 			if (!Condition) return
-			SetCalculator({...Calculator, CalcInput: Calculator.CalcInput + btnData})
+			SetCalculator(Calculator + btnData)
 		}
 		if (ops.includes(btnData) && btnData !== 'C' && btnData !== '«' && btnData !== '(' && btnData !== ')' && btnData !== '=') {
-			let Condition = (!ops.includes(Calculator.CalcInput.slice(-1)) && Calculator.CalcInput !== '') || Calculator.CalcInput.slice(-1) === ')'
+			let Condition = (!ops.includes(Calculator.slice(-1)) && Calculator !== '') || Calculator.slice(-1) === ')'
 			if (!Condition) return
-			if (Calculator.CalcInput.slice(-1) === ')' && btnData === ')') return
-			SetCalculator({...Calculator, CalcInput: Calculator.CalcInput + btnData})
+			if (Calculator.slice(-1) === ')' && btnData === ')') return
+			SetCalculator(Calculator + btnData)
 		}
 		if (btnData === 'C') {
-			SetCalculator({CalcInput: '', Result: '0'})
+			SetCalculator('')
+			setResult('0')
 		}
 		if (btnData === '«') {
-			SetCalculator({...Calculator, CalcInput: Calculator.CalcInput.slice(0, -1)})
+			SetCalculator(Calculator.slice(0, -1))
 		}
-		if (btnData === '=' && (!ops.includes(Calculator.CalcInput.slice(-1)) || Calculator.CalcInput.slice(-1) === ')')) {
+		if (btnData === '=' && (!ops.includes(Calculator.slice(-1)) || Calculator.slice(-1) === ')')) {
 			resultBtn()
 		}
 	}
 	
 	useEffect(() => {
-		SetCalculator({...Calculator, CalcInput: ChangedHistory})
+		SetCalculator(ChangedHistory)
 		changeInput()
 	}, [ChangedHistory])
 	
 	const OnChangeInput = (e) => {
-		SetCalculator({...Calculator, CalcInput: e.target.value})
+		SetCalculator(e.target.value)
 	}
 	
 	return (
 		<div className={styles.Calculator}>
 			<div className={styles.Display}>
-				{/*<span>( {Calculator.Result} )</span>*/}
-				<input type="text" value={Calculator.CalcInput}
+				<span>( {Result} )</span>
+				<input type="text" value={Calculator}
 				       onChange={OnChangeInput}
 				       style={{fontSize: `${InputFZ < 2 ? 38 / InputFZ : 40 / 2}px`}}
 				       placeholder="0"

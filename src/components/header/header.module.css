@@ -56,6 +56,12 @@
     font-weight: bold;
 }
 
+@media (max-width: 525px) {
+    .logoName {
+        font-size: 1.3em;
+    }
+}
+
 .logoName:hover {
     text-shadow: red -2px 0,
     cyan 2px 0;
@@ -71,12 +77,6 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-@media (max-width: 525px) {
-    .menuburgerWrapper {
-        margin-left: 7%;
-    }
 }
 
 .menuburgerWrapper:hover .menuburger,
@@ -134,6 +134,23 @@
     cursor: pointer;
 }
 
+@media (max-width: 525px) {
+    .menuburgerWrapper {
+        margin-left: 7%;
+        width: 25px;
+    }
+
+    .menuburger::before,
+    .menuburgerActive::before {
+        margin-left: -13px;
+    }
+
+    .menuburger::after,
+    .menuburgerActive::after {
+        margin-left: -13px;
+    }
+}
+
 .menuburgerActive {
     transform: rotate(40deg);
     -webkit-transform: rotate(40deg);
@@ -179,6 +196,13 @@
 .settingsButton img {
     width: 30px;
     height: 30px;
+}
+
+@media (max-width: 525px) {
+    .settingsButton img {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 @media (max-width: 300px) {
