@@ -3,7 +3,7 @@ import Calculator from "../../components/calculator/calculator";
 import {memo, useState} from "react";
 import Background from "../../components/UI/Background/Background";
 
-export default function CalculatorPage(props) {
+export default memo(function CalculatorPage(props) {
 	
 	const [History, setHistory] = useState([])
 	const [ChangeHistory, setChangeHistory] = useState('')
@@ -17,9 +17,9 @@ export default function CalculatorPage(props) {
 			<div className={styles.content}>
 				<Calculator History={HistoryMove} ChangedHistory={ChangeHistory}/>
 				<List>
-					{History.map((obj, index) => {
+					{History.map((obj) => {
 						return (
-							<li key={index} onClick={() => {
+							<li key={obj.res} onClick={() => {
 								setChangeHistory(obj.nums)
 							}}>
 								{obj.nums} = {obj.res}
@@ -30,7 +30,7 @@ export default function CalculatorPage(props) {
 			</div>
 		</main>
 	)
-}
+})
 
 const List = memo(function List({children}) {
 	return (

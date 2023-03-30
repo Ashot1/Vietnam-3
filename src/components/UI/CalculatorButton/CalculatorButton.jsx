@@ -1,11 +1,13 @@
 import styles from './CalculatorButton.module.css'
-import {memo} from "react";
+import {useState} from "react";
 
-export default memo(function CalculatorButton({children, is00, ChangeValue}) {
+export default function CalculatorButton({children, ChangeValue, changeNumber}) {
+	
+	const [Value, SetValue] = useState(children)
 	
 	return (
-		<button className={styles.calcBtn} onClick={ChangeValue}>
-			{children}
+		<button className={styles.calcBtn} onClick={!isNaN(parseInt(Value)) ? changeNumber : ChangeValue}>
+			{Value}
 		</button>
 	);
-})
+}
