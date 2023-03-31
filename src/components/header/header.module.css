@@ -26,6 +26,10 @@
     .header {
         width: 90%;
     }
+
+    .HeaderClosed {
+        display: none;
+    }
 }
 
 .logoNamePosition {
@@ -134,7 +138,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 525px) {
+@media (max-width: 385px) {
     .menuburgerWrapper {
         margin-left: 7%;
         width: 25px;
@@ -148,6 +152,23 @@
     .menuburger::after,
     .menuburgerActive::after {
         margin-left: -13px;
+    }
+}
+
+@media (min-width: 385px) and (max-width: 525px) {
+    .menuburgerWrapper {
+        margin-left: 7%;
+        width: 25px;
+    }
+
+    .menuburger::before,
+    .menuburgerActive::before {
+        margin-left: -12px;
+    }
+
+    .menuburger::after,
+    .menuburgerActive::after {
+        margin-left: -12px;
     }
 }
 

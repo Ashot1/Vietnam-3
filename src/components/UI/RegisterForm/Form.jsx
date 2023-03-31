@@ -40,9 +40,17 @@ function Login() {
 
 function Buttons({setFormLogin, SetFormRegister}) {
 	return (
-		<>
-			<button onClick={setFormLogin}>Login</button>
-			<button onClick={SetFormRegister}>Register</button>
-		</>
+		<div style={{gap: '25px', display: 'flex', flexDirection: 'column'}}>
+			<button className={styles.button} onClick={setFormLogin}>
+			<span className={styles.box}>
+				Login
+			</span>
+			</button>
+			<button className={styles.button} onClick={SetFormRegister}>
+			<span className={styles.box}>
+				Register
+			</span>
+			</button>
+		</div>
 	)
 }

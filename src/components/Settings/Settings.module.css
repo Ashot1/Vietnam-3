@@ -1,0 +1,97 @@
+
+.settings {
+    width: 100%;
+    height: calc(100% - 430px);
+    margin-bottom: 25px;
+    margin-top: 25px;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 100px);
+    gap: 50px;
+}
+
+@media (max-width: 500px) {
+    .settings {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 300px) {
+    .settings {
+        grid-template-columns: repeat(2, 100px);
+        grid-row-gap: 15px;
+    }
+}
+
+.params {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.52);
+}
+
+.params:hover {
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+    -2px -2px 4px rgba(255, 255, 255, .4),
+    2px 2px 2px rgba(255, 255, 255, .05),
+    2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+.paramsActive {
+    box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .7),
+    inset -5px -5px 4px rgba(255, 255, 255, .5),
+    inset 5px 5px 2px rgba(255, 255, 255, .075),
+    inset 5px 5px 4px rgba(0, 0, 0, .15);
+    color: rgba(0, 0, 0, 0.72);
+}
+
+.paramsActiveImg {
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+    opacity: .8;
+}
+
+.paramsActive:hover {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+    inset -2px -2px 4px rgba(255, 255, 255, .5),
+    inset 2px 2px 2px rgba(255, 255, 255, .075),
+    inset 2px 2px 4px rgba(0, 0, 0, .15);
+    color: rgba(0, 0, 0, 0.72);
+}
+
+.paramsImg {
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+    opacity: .6;
+}
+
+.params:nth-child(1) img {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    height: 40px;
+    width: 40px;
+}
+
+.params:nth-child(3) img {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    height: 40px;
+    width: 40px;
+}

@@ -1,4 +1,5 @@
-.menu {
+
+.menu, .MenuBottom {
     position: fixed;
     width: 80px;
     height: 100%;
@@ -78,7 +79,14 @@
         box-shadow: none;
     }
 
-    .menuButtons {
+    .MenuBottom {
+        width: 100%;
+        height: 60px;
+        z-index: 3;
+        bottom: 0;
+    }
+
+    .menu > .menuButtons {
         display: flex;
         width: clamp(220px, 80%, 300px);
         border-bottom-left-radius: 15px;
@@ -92,9 +100,19 @@
         border-top-right-radius: 0;
     }
 
+    .MenuBottom > .menuButtons {
+        display: flex;
+        width: 100%;
+        background: white;
+        height: 100%;
+        padding-bottom: env(safe-area-inset-bottom);
+        border-radius: 0;
+        padding-left: 0;
+    }
+
     @keyframes MenuOpen {
         0% {
-            transform: translateY(-50px);
+            transform: translateY(-60px);
         }
 
         100% {
@@ -115,7 +133,7 @@
 }
 
 @media (max-width: 320px) {
-    .menu {
+    .menu, .MenuBottom {
         height: 50px
     }
 }

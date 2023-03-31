@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import StartPage from "./pages/start/startPage";
 import Slider from "./components/slider/slider";
 import Startmenu from "./components/startmenu/startmenu";
@@ -11,39 +11,10 @@ import NotFoundedPage from "./pages/NotFounded/NotFoundedPage";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {Route, Routes, useLocation} from "react-router-dom";
 import ModalWindow from "./components/UI/ModalWindow/modalWindow";
+import MarksList from "./components/MarksList/MarksList";
+import TodoList from "./components/TodoList/TodoList";
 
 export default function Routing(props) {
-	
-	const [Routers, setRouters] = useState([
-		{
-			content: <StartPage><Slider/><Startmenu/></StartPage>,
-			url: '/'
-		},
-		{
-			content: <CalculatorPage/>,
-			url: '/Calculator'
-		},
-		{
-			content: <ConsolePage/>,
-			url: '/Console'
-		},
-		{
-			content: <DownloadPage/>,
-			url: '/Download'
-		},
-		{
-			content: <SRMPage/>,
-			url: '/SocialRatingMiner'
-		},
-		{
-			content: <TodoPage><ModalWindow/></TodoPage>,
-			url: '/Todo'
-		},
-		{
-			content: <NotFoundedPage/>,
-			url: '*'
-		},
-	])
 	
 	const location = useLocation()
 	
@@ -74,11 +45,25 @@ export default function Routing(props) {
 			>
 				<div>
 					<Routes>
-						{Routers.map((item) => {
-							return (
-								<Route key={item.url} path={item.url} element={item.content}/>
-							)
-						})}
+						<Route path={'/'} element={
+							<StartPage>
+								<Slider/>
+								<Startmenu/>
+							</StartPage>
+						}/>
+						<Route path={'/Calculator'} element={<CalculatorPage/>}/>
+						<Route path={'/Console'} element={<ConsolePage/>}/>
+						<Route path={'/Download'} element={<DownloadPage/>}/>
+						<Route path={'/SocialRatingMiner'} element={<SRMPage/>}/>
+						<Route path={'/Todo'} element={
+							<TodoPage>
+								<ModalWindow/>
+							</TodoPage>
+						}>
+							<Route path={'Marks'} element={<MarksList/>}/>
+							<Route path={'Todos'} element={<TodoList/>}/>
+						</Route>
+						<Route path={'*'} element={<NotFoundedPage/>}/>
 					</Routes>
 				</div>
 			</CSSTransition>

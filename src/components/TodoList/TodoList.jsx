@@ -1,8 +1,10 @@
 import styles from './TodoList.module.css'
-import {memo} from "react";
+import {memo, useState} from "react";
 
 export default memo(function TodoList(props) {
-		const TodoList = props.todo
+		const [TodoList, setTodoList] = useState([
+			{id: '1', content: 'Lorem ipsum dolor sit amet'}
+		])
 		
 		return (
 			<ul className={styles.TodoUl}>

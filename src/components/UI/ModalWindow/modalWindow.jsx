@@ -1,5 +1,5 @@
 import styles from './modalWindow.module.css'
-import {memo, useRef} from "react";
+import {useRef} from "react";
 
 export default function ModalWindow({CloseSetting, children, classModal}) {
 	const modalRef = useRef()
@@ -11,20 +11,10 @@ export default function ModalWindow({CloseSetting, children, classModal}) {
 				onClick={(e) => e.stopPropagation()}
 			>
 				{children}
-				<div className={styles.btnPos}>
-					<CloseFunction CloseSetting={CloseSetting}/>
+				<div className={styles.btnPos} onClick={CloseSetting}>
+					<p>Закрыть</p>
 				</div>
 			</div>
 		</div>
 	);
 }
-
-const CloseFunction = memo(function CloseFunction({CloseSetting}) {
-	return (
-		<button className={styles.button} onClick={CloseSetting}>
-			<span className={styles.box}>
-				Закрыть
-			</span>
-		</button>
-	)
-})

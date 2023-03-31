@@ -5,13 +5,16 @@ import {Link} from 'react-router-dom';
 export default function Header(props) {
 	const [BurgerState, setBurgerState] = useState(false)
 	
+	let MobMenu = localStorage.getItem('Mobile Menu')
+	let HeaderVision = MobMenu === 'upper' ? styles.headerWrapper : `${styles.headerWrapper} ${styles.HeaderClosed}`
+	
 	const burgerChange = () => {
 		props.BurgerChange(BurgerState)
+		
 	}
 	
-	
 	return (
-		<header className={styles.headerWrapper}>
+		<header className={HeaderVision}>
 			<div className={styles.header}>
 				<MenuBurger BurgerState={BurgerState} setBurgerState={setBurgerState} BurgerChange={burgerChange}/>
 				<HeaderName/>

@@ -42,7 +42,6 @@ export default function Calculator({History, ChangedHistory}) {
 		}
 		
 		if (huy.indexOf('=') > 0) huy[huy.indexOf('=')] = ''
-		console.log(huy)
 		
 		return Calculate(huy.join('')).toString()
 	}, [])
