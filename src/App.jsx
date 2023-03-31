@@ -27,7 +27,10 @@ export default function App() {
 	}
 	
 	useEffect(() => {
-		if (localStorage.getItem('Mobile Menu') === null) localStorage.setItem('Mobile Menu', 'upper')
+		if (localStorage.getItem('Mobile Menu') === null) {
+			localStorage.setItem('Mobile Menu', 'upper')
+			window.location.reload()
+		}
 	}, [])
 	
 	return (
