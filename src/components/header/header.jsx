@@ -1,16 +1,16 @@
 import styles from './header.module.css'
-import {memo, useState} from 'react'
+import {memo, useContext, useMemo, useState} from 'react'
 import {Link} from 'react-router-dom';
+import {AuthContext} from "../../provider/AuthContext";
 
 export default function Header(props) {
 	const [BurgerState, setBurgerState] = useState(false)
 	
-	let MobMenu = localStorage.getItem('Mobile Menu')
+	let MobMenu = useMemo(() => localStorage.getItem('Mobile Menu'), [localStorage.getItem('Mobile Menu')])
 	let HeaderVision = MobMenu === 'upper' ? styles.headerWrapper : `${styles.headerWrapper} ${styles.HeaderClosed}`
 	
 	const burgerChange = () => {
 		props.BurgerChange(BurgerState)
-		
 	}
 	
 	return (
@@ -48,9 +48,13 @@ const HeaderName = memo(function HeaderName() {
 )
 
 const AccountLogo = memo(function AccountLogo({setSettingsState}) {
+	
+	const User = useContext(AuthContext)
+	const Logo = User ? User.photoURL : "/images/header/user.png"
+	
 	return (
 		<button className={styles.settingsButton} onClick={setSettingsState}>
-			<img src="/images/header/user.png" alt=""/>
+			<img src={Logo} alt="" style={{borderRadius: '50%'}}/>
 		</button>
 	)
 })

@@ -1,7 +1,9 @@
 import styles from "./todo.module.css";
-import {Link, Outlet, useLocation} from "react-router-dom";
+import {Link, Navigate, Outlet, useLocation} from "react-router-dom";
 
 export default function TodoPage(props) {
+	const location = useLocation()
+	if (location.pathname === '/Todo') return <Navigate replace to="/Todo/Marks"/>
 	return (
 		<main className={styles.main}>
 			<div className={styles.content}>

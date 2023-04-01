@@ -14,6 +14,8 @@
 @media (max-width: 500px) {
     .settings {
         gap: 15px;
+        height: calc(100% - 495px);
+        margin-top: 90px;
     }
 }
 
@@ -21,6 +23,8 @@
     .settings {
         grid-template-columns: repeat(2, 100px);
         grid-row-gap: 15px;
+        height: calc(100% - 420px);
+        margin-top: 15px;
     }
 }
 
@@ -57,7 +61,7 @@
     inset -5px -5px 4px rgba(255, 255, 255, .5),
     inset 5px 5px 2px rgba(255, 255, 255, .075),
     inset 5px 5px 4px rgba(0, 0, 0, .15);
-    color: rgba(0, 0, 0, 0.72);
+    color: #f7ba2b;
 }
 
 .paramsActiveImg {
@@ -72,7 +76,7 @@
     inset -2px -2px 4px rgba(255, 255, 255, .5),
     inset 2px 2px 2px rgba(255, 255, 255, .075),
     inset 2px 2px 4px rgba(0, 0, 0, .15);
-    color: rgba(0, 0, 0, 0.72);
+    color: #f7ba2b;
 }
 
 .paramsImg {

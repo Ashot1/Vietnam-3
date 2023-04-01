@@ -27,7 +27,7 @@ export default function MenuLinkButtons(props) {
 				onClick={props.SettingsClick}
 			>
 				<img src={`${props.src}`} className={styles.button_img}
-				     style={{filter: 'invert(0)', width: '27px', height: '27px'}}/>
+				     style={{filter: 'invert(0)', width: '27px', height: '27px', borderRadius: '50%'}}/>
 			</button>
 		)
 		

@@ -1,6 +1,7 @@
 import styles from './SRM.module.css'
 
 export default function SRMPage(props) {
+	
 	return (
 		<main className={styles.main}>
 			<div className={styles.content}>

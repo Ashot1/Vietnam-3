@@ -4,7 +4,7 @@ import styles from './App.module.css';
 import Header from './components/header/header'
 import Menu from './components/menu/menu'
 import ModalWindow from "./components/UI/ModalWindow/modalWindow";
-import Form from "./components/UI/RegisterForm/Form";
+import Form from "./components/UI/Form/Form";
 import Settings from "./components/Settings/Settings";
 
 const Routing = lazy(() => import("./Routing"))
