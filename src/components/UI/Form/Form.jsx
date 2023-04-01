@@ -41,7 +41,7 @@ function AccountInfo({user, auth, SetUser}) {
 					<img src={user.photoURL} className={styles.photoImage}/>
 				</section>
 				<section>
-					<h2>12312321321321321312{user.displayName}</h2>
+					<h2>{user.displayName}</h2>
 					<span>Зарегистрирован {RegisterDate(user.metadata.creationTime)}</span>
 					<button className={styles.noselect} onClick={() => {
 						signOut(auth);
