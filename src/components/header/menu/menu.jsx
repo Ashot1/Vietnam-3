@@ -1,8 +1,8 @@
 import styles from './menu.module.css'
 import {CSSTransition} from "react-transition-group";
-import MenuLinkButtons from "../UI/ButtonMenu/MenuLinkButtons";
+import MenuLinkButtons from "../../UI/ButtonMenu/MenuLinkButtons";
 import {useContext, useMemo} from "react";
-import {AuthContext} from "../../provider/AuthContext";
+import {AuthContext} from "../../../provider/AuthContext";
 
 
 export default function Menu({MenuChanges, setSetting}) {

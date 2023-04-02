@@ -10,11 +10,11 @@ import TodoPage from "./pages/todo/todoPage";
 import NotFoundedPage from "./pages/NotFounded/NotFoundedPage";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {Route, Routes, useLocation} from "react-router-dom";
-import ModalWindow from "./components/UI/ModalWindow/modalWindow";
 import MarksList from "./components/MarksList/MarksList";
 import TodoList from "./components/TodoList/TodoList";
+import Mark from "./components/MarksList/Mark/Mark";
 
-export default function Routing(props) {
+export default function Routing({ChangeCreateModal}) {
 	
 	const location = useLocation()
 	
@@ -55,12 +55,9 @@ export default function Routing(props) {
 						<Route path={'/Console'} element={<ConsolePage/>}/>
 						<Route path={'/Download'} element={<DownloadPage/>}/>
 						<Route path={'/SocialRatingMiner'} element={<SRMPage/>}/>
-						<Route path={'/Todo'} element={
-							<TodoPage>
-								<ModalWindow/>
-							</TodoPage>
-						}>
-							<Route path={'Marks'} element={<MarksList/>}/>
+						<Route path={'/Todo'} element={<TodoPage></TodoPage>}>
+							<Route path={'Marks'} element={<MarksList ChangeCreateModal={ChangeCreateModal}/>}/>
+							<Route path={'Marks/:MarkId'} element={<Mark/>}/>
 							<Route path={'Todos'} element={<TodoList/>}/>
 						</Route>
 						<Route path={'*'} element={<NotFoundedPage/>}/>

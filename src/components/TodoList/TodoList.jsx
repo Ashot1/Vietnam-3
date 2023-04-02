@@ -8,14 +8,15 @@ export default memo(function TodoList(props) {
 		
 		return (
 			<ul className={styles.TodoUl}>
-				{TodoList.map(todo => {
-					return (
-						<li key={todo.id} className={styles.TodoLi}>
-							<input type="checkbox"/>
-							<p>{todo.content}</p>
-						</li>
-					)
-				})}
+				<h2>В разработке</h2>
+				{/*{TodoList.map(todo => {*/}
+				{/*	return (*/}
+				{/*		<li key={todo.id} className={styles.TodoLi}>*/}
+				{/*			<input type="checkbox"/>*/}
+				{/*			<p>{todo.content}</p>*/}
+				{/*		</li>*/}
+				{/*	)*/}
+				{/*})}*/}
 			</ul>
 		);
 	}

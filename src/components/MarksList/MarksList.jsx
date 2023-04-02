@@ -1,49 +1,20 @@
 import styles from "./MarksList.module.css";
-import {memo, useState} from "react";
+import {memo, useContext, useEffect, useState} from "react";
+import {DataContext} from "../../provider/DataContext";
+import {Link} from "react-router-dom";
+import Loading from "../Loading/Loading";
 
-export default memo(function MarksList(props) {
-	const [Marks, setMarks] = useState([
-		{
-			id: 1,
-			title: "Huy",
-			content: "\n" +
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
-				"\todio quas quia, quis ratione ullam veniam voluptas. Doloremque quo repellat similique soluta veritatis!\n" +
-				"Dolorem ea illo officia pariatur quam vero voluptatibus. A accusamus ad atque consectetur consequuntur dolorem\n" +
-				"\texpedita nam recusandae sit totam! Dolore ex iure porro praesentium soluta. Cum eligendi mollitia recusandae.",
-			isActive: false
-		},
-		{
-			id: 12,
-			title: "Huy2",
-			content: "\n" +
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
-				"\todio quas quia, quis ratione ullam veniam voluptas. Doloremque quo repellat similique soluta veritatis!\n" +
-				"Dolorem ea illo officia pariatur quam vero voluptatibus. A accusamus ad atque consectetur consequuntur dolorem\n" +
-				"\texpedita nam recusandae sit totam! Dolore ex iure porro praesentium soluta. Cum eligendi mollitia recusandae.",
-			isActive: false
-		},
-		{
-			id: 13,
-			title: "Huy3",
-			content: "\n" +
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
-				"\todio quas quia, quis ratione ullam veniam voluptas. Doloremque quo repellat similique soluta veritatis!\n" +
-				"Dolorem ea illo officia pariatur quam vero voluptatibus. A accusamus ad atque consectetur consequuntur dolorem\n" +
-				"\texpedita nam recusandae sit totam! Dolore ex iure porro praesentium soluta. Cum eligendi mollitia recusandae.",
-			isActive: false
-		},
-		{
-			id: 15,
-			title: "Huy",
-			content: "\n" +
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque debitis dolorem eos fugiat laudantium maxime\n" +
-				"\todio quas quia, quis ratione ullam veniam voluptas. Doloremque quo repellat similique soluta veritatis!\n" +
-				"Dolorem ea illo officia pariatur quam vero voluptatibus. A accusamus ad atque consectetur consequuntur dolorem\n" +
-				"\texpedita nam recusandae sit totam! Dolore ex iure porro praesentium soluta. Cum eligendi mollitia recusandae.",
-			isActive: false
-		},
-	])
+
+export default memo(function MarksList({ChangeCreateModal}) {
+	const [Marks, setMarks] = useState([])
+	const [MarkArr, loading, error] = useContext(DataContext)
+	
+	
+	useEffect(() => {
+		if (loading) return
+		
+		setMarks(MarkArr)
+	}, [MarkArr])
 	
 	const HoverEffect = (e) => {
 		const x = e.clientX - e.target.offsetLeft,
@@ -55,17 +26,30 @@ export default memo(function MarksList(props) {
 	
 	return (
 		<ul className={styles.TodoUl}>
-			{Marks.map(todo => {
+			{loading ? <Loading/> : Marks.map(todo => {
+				let date = todo.CreateAt.split(',')[0];
 				return (
-					<li key={todo.id} className={styles.TodoLi} onMouseMove={HoverEffect}>
+					<Link to={`/Todo/Marks/${todo.id}`} key={todo.id}
+					      className={styles.TodoLi}
+					      onMouseMove={HoverEffect}>
 						<h1>{todo.title}</h1>
-						<p>{todo.content}</p>
-					</li>
+						<p>{todo.Content}</p>
+						<b>{date}</b>
+					</Link>
 				)
 			})}
-			<li key={0} className={styles.TodoLi} onMouseMove={HoverEffect}>
-				<span>➕</span>
-			</li>
+			{loading ? null : <PlusButton HoverEffect={HoverEffect} ChangeCreateModal={ChangeCreateModal}/>}
 		</ul>
+	)
+})
+
+const PlusButton = memo(function PlusButton({HoverEffect, ChangeCreateModal}) {
+	return (
+		<li key={0}
+		    className={styles.TodoLi}
+		    onMouseMove={HoverEffect}
+		    onClick={ChangeCreateModal}>
+			<span>➕</span>
+		</li>
 	)
 })

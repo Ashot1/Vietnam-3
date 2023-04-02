@@ -1,66 +1,79 @@
-
-.Loading {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+.newtons_cradle {
+    --uib-size: 50px;
+    --uib-speed: 1.2s;
+    --uib-color: #474554;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--uib-size);
+    height: var(--uib-size);
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    height: 96px;
-    width: 96px;
-    animation: rotate_3922 1.2s linear infinite;
-    background-color: #9b59b6;
-    background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
-}
-
-.container span {
-    position: absolute;
-    border-radius: 50%;
+.newtons_cradle__dot {
+    position: relative;
+    display: flex;
+    align-items: center;
     height: 100%;
+    width: 25%;
+    transform-origin: center top;
+}
+
+.newtons_cradle__dot::after {
+    content: '';
+    display: block;
     width: 100%;
-    background-color: #9b59b6;
-    background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
-}
-
-.container span:nth-of-type(1) {
-    filter: blur(5px);
-}
-
-.container span:nth-of-type(2) {
-    filter: blur(10px);
-}
-
-.container span:nth-of-type(3) {
-    filter: blur(25px);
-}
-
-.container span:nth-of-type(4) {
-    filter: blur(50px);
-}
-
-.container::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background-color: #fff;
-    border: solid 5px #ffffff;
+    height: 25%;
     border-radius: 50%;
+    background-color: var(--uib-color);
 }
 
-@keyframes rotate_3922 {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
+.newtons_cradle__dot:first-child {
+    animation: swing var(--uib-speed) linear infinite;
+}
+
+.newtons_cradle__dot:last-child {
+    animation: swing2 var(--uib-speed) linear infinite;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
     }
 
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
+    25% {
+        transform: rotate(70deg);
+        animation-timing-function: ease-in;
     }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes swing2 {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: rotate(-70deg);
+        animation-timing-function: ease-in;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,11 +1,11 @@
 import {lazy, useEffect, useState} from "react";
 import styles from './App.module.css';
-
 import Header from './components/header/header'
-import Menu from './components/menu/menu'
+import Menu from './components/header/menu/menu'
 import ModalWindow from "./components/UI/ModalWindow/modalWindow";
 import Form from "./components/UI/Form/Form";
 import Settings from "./components/Settings/Settings";
+import CreateMark from "./components/MarksList/CreateMarkForm/CreateMarkForm";
 
 const Routing = lazy(() => import("./Routing"))
 
@@ -13,6 +13,11 @@ const Routing = lazy(() => import("./Routing"))
 export default function App() {
 	const [MenuOpen, setMenuOpen] = useState(false)
 	const [SettingsState, setSettingsState] = useState(false)
+	const [CreateMarkActive, setCreateMarkActive] = useState(false)
+	
+	const ChangeCreateModal = () => {
+		setCreateMarkActive(!CreateMarkActive)
+	}
 	
 	function MenuActivation(value) {
 		return setMenuOpen((MenuOpen) => !MenuOpen);
@@ -46,7 +51,8 @@ export default function App() {
 				</div>
 				<Settings/>
 			</ModalWindow> : null}
-			<Routing/>
+			<CreateMark CreateMarkActive={CreateMarkActive} ChangeCreateModal={ChangeCreateModal}/>
+			<Routing ChangeCreateModal={ChangeCreateModal}/>
 		</div>
 	);
 }

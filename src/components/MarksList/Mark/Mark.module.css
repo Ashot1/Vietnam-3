@@ -1,0 +1,114 @@
+
+.Mark {
+    padding: 50px;
+    background: var(--backgroundC);
+    border-radius: 15px;
+    min-height: 650px;
+    margin-top: 50px;
+}
+
+@media (max-width: 500px) {
+    .Mark {
+        padding: 10px;
+    }
+}
+
+.Mark > section:nth-child(1) {
+    display: flex;
+    align-items: flex-end;
+    height: 60px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+
+.backButton {
+    margin-left: 15px;
+}
+
+.backButton img {
+    width: 27px;
+    height: 25px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.backButton img:hover {
+    transition: .4s;
+    opacity: .4;
+}
+
+.wrapper {
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+}
+
+.wrapper button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.wrapper button img {
+    transition: .4s;
+    width: 27px;
+    height: 27px;
+}
+
+.wrapper button:hover img {
+    transition: .4s;
+    opacity: .4;
+}
+
+.info h2,
+.TitleArea {
+    background: rgb(196, 137, 59);
+    padding: 15px;
+    border-radius: 10px;
+    width: auto;
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.TitleArea {
+    resize: none;
+    outline: none;
+    width: 95%;
+    height: 100px;
+    font-size: 18px;
+}
+
+.ContentArea {
+    resize: none;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 95%;
+    height: 500px;
+}
+
+.info p,
+.ContentArea {
+    font-family: 'Signika', sans-serif;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.info span {
+    font-weight: 600;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 150px;
+}

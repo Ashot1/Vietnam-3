@@ -6,6 +6,7 @@ import {BrowserRouter} from "react-router-dom";
 import './firebase'
 import AuthProvider from './provider/AuthContext'
 
+
 const root = ReactDOM.createRoot(document.querySelector('#WebBody'));
 root.render(
 	<React.StrictMode>

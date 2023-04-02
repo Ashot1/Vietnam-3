@@ -62,34 +62,34 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
-    height: 150px;
+    height: auto;
+    min-height: 190px;
     padding: 10px;
     position: relative;
     color: var(--TextC);
+    text-decoration: none;
+}
+
+.TodoLi b {
+    font-family: 'Raleway', sans-serif;
 }
 
 @media (max-width: 768px) and (min-width: 500px) {
     .TodoUl {
-        grid-template-columns: repeat(auto-fit, clamp(225px, 30%, 700px));
+        grid-template-columns: repeat(auto-fit, clamp(225px, 40%, 700px));
     }
 }
 
 @media (max-width: 500px) {
     .TodoUl {
-        grid-template-columns: repeat(2, auto);
+        text-align: center;
+        width: 95%;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .TodoLi p {
         -webkit-line-clamp: 4;
     }
 
-    .TodoLi {
-        height: 160px;
-    }
 }
 
-@media (max-width: 320px) {
-    .TodoUl {
-        grid-template-columns: repeat(1, auto);
-    }
-}
