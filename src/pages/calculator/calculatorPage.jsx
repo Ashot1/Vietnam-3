@@ -5,13 +5,12 @@ import Background from "../../components/UI/Background/Background";
 
 export default memo(function CalculatorPage(props) {
 	
-	const [History, setHistory] = useState([])
-	const [ChangeHistory, setChangeHistory] = useState('')
+	const [History, setHistory] = useState([]),
+		[ChangeHistory, setChangeHistory] = useState('')
 	
 	const HistoryMove = (value) => {
 		setHistory([...History, value])
 	}
-	
 	
 	return (
 		<main className={styles.main}>

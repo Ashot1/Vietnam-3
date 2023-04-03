@@ -13,7 +13,7 @@
     }
 }
 
-.Mark > section:nth-child(1) {
+.Navigation {
     display: flex;
     align-items: flex-end;
     height: 60px;
@@ -27,8 +27,6 @@
     width: 100%;
     height: auto;
     align-items: center;
-    -moz-user-select: text;
-    -webkit-user-select: text;
 }
 
 .backButton {
@@ -72,6 +70,7 @@
 
 .info h2,
 .TitleArea {
+    transition: .2s;
     background: rgb(196, 137, 59);
     padding: 15px;
     border-radius: 10px;
@@ -79,6 +78,12 @@
     color: white;
     text-align: center;
     font-family: 'Raleway', sans-serif;
+}
+
+.info h2:hover {
+    transition: .2s;
+    opacity: .8;
+    cursor: pointer;
 }
 
 .TitleArea {
@@ -97,12 +102,24 @@
     height: 500px;
 }
 
+.info p {
+    color: rgba(0, 0, 0, 0.81)
+}
+
 .info p,
 .ContentArea {
     font-family: 'Signika', sans-serif;
-    border: 1px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.51);
     padding: 15px;
     border-radius: 10px;
+    transition: .2s;
+}
+
+.info p:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+    transition: .2s;
 }
 
 .info span {

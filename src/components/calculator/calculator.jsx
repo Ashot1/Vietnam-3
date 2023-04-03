@@ -1,15 +1,15 @@
 import styles from './calculator.module.css'
-import CalculatorButton from "../UI/CalculatorButton/CalculatorButton";
+import CalculatorButton from "./CalculatorButton/CalculatorButton";
 import Background from "../UI/Background/Background";
 import {memo, useCallback, useEffect, useState} from "react";
 
 
 export default function Calculator({History, ChangedHistory}) {
 	
-	const [Calculator, SetCalculator] = useState('')
-	const [Result, setResult] = useState('0')
-	const [InputFZ, setInputFZ] = useState(1)
-	const ops = ['C', '*', '/', '«', '-', '+', '.', '(', ')']
+	const [Calculator, SetCalculator] = useState(''),
+		[Result, setResult] = useState('0'),
+		[InputFZ, setInputFZ] = useState(1),
+		ops = ['C', '*', '/', '«', '-', '+', '.', '(', ')']
 	
 	const changeInput = () => {
 		setInputFZ(Calculator.length > 16 ? Calculator.length / 16 : 1)

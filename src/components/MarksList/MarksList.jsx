@@ -9,7 +9,6 @@ export default memo(function MarksList({ChangeCreateModal}) {
 	const [Marks, setMarks] = useState([])
 	const [MarkArr, loading, error] = useContext(DataContext)
 	
-	
 	useEffect(() => {
 		if (loading) return
 		

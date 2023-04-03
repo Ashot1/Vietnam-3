@@ -1,38 +1,20 @@
 import {useContext, useState} from "react";
 import {AuthContext} from "../../../provider/AuthContext";
-import {addDoc, collection} from "firebase/firestore";
-import {db} from "../../../firebase";
 import ModalWindow from "../../UI/ModalWindow/modalWindow";
 import styles from "./CreateMarkForm.module.css";
+import UseAddCollection from "../../../hooks/useAddCollection";
 
 export default function CreateMark({CreateMarkActive, ChangeCreateModal}) {
 	
 	const [Title, setTitle] = useState('')
 	const [Content, setContent] = useState('')
-	
 	const User = useContext(AuthContext)
 	
 	const SendData = async (e) => {
 		if (Title.length <= 0 || Content.length <= 0) return
 		e.preventDefault()
 		try {
-			const options = {
-				day: 'numeric',
-				month: 'numeric',
-				year: 'numeric',
-				hour: 'numeric',
-				minute: 'numeric',
-				second: 'numeric'
-			}
-			
-			let date = new Date().toLocaleString('ru', options);
-			
-			const docRef = await addDoc(collection(db, "Marks"), {
-				title: Title,
-				Content: Content,
-				id: User.uid,
-				CreateAt: date
-			});
+			await UseAddCollection([Content, Title, "Marks", User])
 			setTitle('')
 			setContent('')
 		} catch (e) {

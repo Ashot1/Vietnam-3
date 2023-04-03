@@ -4,7 +4,6 @@
     justify-content: center;
     position: relative;
     margin-top: 55px;
-    height: 2500px;
 }
 
 .content {
@@ -16,15 +15,5 @@
     .content {
         margin-top: 50px;
         width: 100%;
-    }
-
-    .main {
-        height: 4500px;
-    }
-}
-
-@media (max-width: 500px) {
-    .main {
-        height: 3200px;
     }
 }

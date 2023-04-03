@@ -1,14 +1,12 @@
 import styles from "./Settings.module.css";
-import {memo, useEffect, useState} from "react";
+import {memo, useState} from "react";
 
 export default function Settings({MenuChangeStyle}) {
-	
 	
 	let content = [
 		{src: '/images/Settings/theme.png', title: 'Theme'},
 		{src: '/images/Settings/table-content.png', title: 'Mobile Menu'},
 		{src: '/images/Settings/submit.png', title: 'Send Console'},
-		// {src: '/images/Settings/table-content.png', title: 'Mobile Menu'}
 	]
 	
 	return (
@@ -24,12 +22,8 @@ export default function Settings({MenuChangeStyle}) {
 
 const SettingButton = memo(function SettingButton({item}) {
 	
-	const [Active, setActive] = useState(false)
-	const MobileMenu = localStorage.getItem('Mobile Menu')
-	
-	useEffect(() => {
-		if (item.title === 'Mobile Menu' && MobileMenu === 'bottom') setActive(true)
-	}, [MobileMenu])
+	const MobileMenu = localStorage.getItem('Mobile Menu'),
+		[Active, setActive] = useState(item.title === 'Mobile Menu' && MobileMenu === 'bottom')
 	
 	const Onclick = () => {
 		setActive(!Active)

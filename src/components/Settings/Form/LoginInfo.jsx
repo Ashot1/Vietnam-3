@@ -1,14 +1,13 @@
-import styles from './Form.module.css'
-import {memo, useContext, useState} from "react";
+import styles from './LoginInfo.module.css'
+import {memo, useContext} from "react";
 import {getAuth, GoogleAuthProvider, signInWithPopup, signOut} from "firebase/auth";
 import {AuthContext} from "../../../provider/AuthContext";
 
 
-export default memo(function Form({background}) {
-	const [FormContent, setFormContent] = useState('Buttons')
-	const auth = getAuth()
-	const provider = new GoogleAuthProvider();
-	const User = useContext(AuthContext)
+export default memo(function LoginInfo({background}) {
+	const auth = getAuth(),
+		provider = new GoogleAuthProvider(),
+		User = useContext(AuthContext)
 	
 	const Login = () => {
 		signInWithPopup(auth, provider)
@@ -38,7 +37,7 @@ function AccountInfo({user, auth, SetUser}) {
 		<div className={styles.card}>
 			<div className={styles.info}>
 				<section>
-					<img src={user.photoURL} className={styles.photoImage}/>
+					<img alt="" src={user.photoURL} className={styles.photoImage}/>
 				</section>
 				<section>
 					<h2>{user.displayName}</h2>

@@ -11,7 +11,6 @@ export default function TodoPage({ChangeCreateModal}) {
 	
 	if (location.pathname === '/Todo') return <Navigate replace to="/Todo/Marks"/>
 	
-	
 	return (
 		<main className={styles.main}>
 			<div className={styles.content}>
@@ -39,12 +38,12 @@ function Menu() {
 	
 	return (
 		<span className={styles.Menu}>
-					<Link to={"/Todo/Marks"}
-					      className={match1 ? styles.Active : styles.UnActive}
-					>Заметки</Link>
-					<Link to={"/Todo/Todos"}
-					      className={match2 ? styles.Active : styles.UnActive}
-					>Список Задач</Link>
+			<Link to={"/Todo/Marks"}
+			      className={match1 ? styles.Active : styles.UnActive}
+			>Заметки</Link>
+			<Link to={"/Todo/Todos"}
+			      className={match2 ? styles.Active : styles.UnActive}
+			>Список Задач</Link>
 		</span>
 	)
 }

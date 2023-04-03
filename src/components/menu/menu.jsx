@@ -1,18 +1,17 @@
 import styles from './menu.module.css'
 import {CSSTransition} from "react-transition-group";
-import MenuLinkButtons from "../../UI/ButtonMenu/MenuLinkButtons";
+import MenuLinkButtons from "./ButtonMenu/MenuLinkButtons";
 import {useContext, useMemo} from "react";
-import {AuthContext} from "../../../provider/AuthContext";
+import {AuthContext} from "../../provider/AuthContext";
 
 
 export default function Menu({MenuChanges, setSetting}) {
 	
-	const MenuStyleCondition = useMemo(() => localStorage.getItem('Mobile Menu') === 'upper', [localStorage.getItem('Mobile Menu')])
-	const MenuStyle = MenuStyleCondition ? styles.menu : styles.MenuBottom
-	let MenuMobileCondition = !MenuStyleCondition && window.matchMedia("(max-width: 768px)").matches
-	
-	const User = useContext(AuthContext)
-	const Logo = User ? User.photoURL : '/images/menu/user.png'
+	const MenuStyleCondition = useMemo(() => localStorage.getItem('Mobile Menu') === 'upper', [localStorage.getItem('Mobile Menu')]),
+		MenuStyle = MenuStyleCondition ? styles.menu : styles.MenuBottom,
+		MenuMobileCondition = !MenuStyleCondition && window.matchMedia("(max-width: 768px)").matches,
+		User = useContext(AuthContext),
+		Logo = User ? User.photoURL : '/images/menu/user.png'
 	
 	return (
 		<CSSTransition

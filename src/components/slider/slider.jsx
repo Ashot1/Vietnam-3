@@ -1,79 +1,61 @@
 import styles from './slider.module.css'
-import {useEffect, useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 
-const image = [
-	'/images/slider/Armenia.jpg',
-	'/images/slider/hitler.jpg',
-	'/images/slider/KoshkaJena.jpg',
-	'/images/slider/Shreks.jpg',
-	'/images/slider/Ukrain.jpg',
-	'/images/slider/viktor-korneplod.jpg',
-	'/images/slider/Папич.jpg'
-]
 
 export default function Slider() {
 	
-	const [SlideNumber, setSlideNumber] = useState(0)
+	const [SlideNumber, setSlideNumber] = useState(0),
+		image = useMemo(() => [
+			{url: '/images/slider/Armenia.jpg'},
+			{url: '/images/slider/hitler.jpg'},
+			{url: '/images/slider/KoshkaJena.jpg'},
+			{url: '/images/slider/Shreks.jpg'},
+			{url: '/images/slider/Ukrain.jpg'},
+			{url: '/images/slider/viktor-korneplod.jpg'},
+			{url: '/images/slider/Папич.jpg'},
+			{url: ''}
+		], [])
 	
-	//button change slide
-	function changeSlide(value) {
-		return setSlideNumber(value)
-	}
-	
-	// autoslide
+	// auto-slide
 	useEffect(() => {
+		if (SlideNumber === image.length - 1) setSlideNumber(0)
 		
 		const interval = setInterval(() => {
 			setSlideNumber((SlideNumber) => SlideNumber + 1);
 		}, 5000);
 		
-		return () => {
-			clearInterval(interval)
-		}
+		return () => clearInterval(interval)
 	}, [SlideNumber])
-	
-	// Check slide != 7
-	if (SlideNumber == image.length) {
-		setSlideNumber(0)
-	}
 	
 	return (
 		<div className={styles.sliderWrapper}>
-			<div id='Slider' className={styles.slider} style={{backgroundImage: `url(${image[SlideNumber]})`}}>
+			<div id='Slider' className={styles.slider} style={{backgroundImage: `url(${image[SlideNumber].url})`}}>
 			
 			</div>
 			<div className={styles.ButtonsWrapper}>
 				<ul className={styles.points}>
-					<Buttons ButtonLength={SlideNumber} ActiveNumber={SlideNumber} Changes={changeSlide}/>
+					<Buttons ButtonID={SlideNumber}
+					         ActiveNumber={SlideNumber}
+					         Changes={(value) => setSlideNumber(value)}
+					         image={image}
+					/>
 				</ul>
 			</div>
 		</div>
 	)
 }
 
-function Buttons(props) {
+function Buttons({image, Changes, ButtonID}) {
 	
-	let ButtonsArray = []
+	return (
+		image.map((item, index) => {
+				return <li
+					key={index}
+					onClick={() => Changes(index)}
+					className={index === image.length - 1 ? null : styles.SliderButton}
+					style={{background: ButtonID === index ? 'black' : 'rgb(179, 179, 179)'}}
+				></li>
+			}
+		))
 	
-	//create buttons
-	for (let i = 0; i < image.length; i++) {
-		ButtonsArray.push(
-			<li
-				key={i}
-				onClick={() => {
-					props.Changes(i)
-				}}
-				className={styles.SliderButton}
-				style={{background: 'rgb(179, 179, 179)'}}
-			>
-			
-			</li>
-		)
-		
-	}
-	
-	// change color button
-	ButtonsArray[props.ButtonLength].props.style.background = 'black'
-	
-	return (ButtonsArray)
 }

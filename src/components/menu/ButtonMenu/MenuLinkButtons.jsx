@@ -1,22 +1,18 @@
-import {Link, useLocation, useMatch} from "react-router-dom";
+import {Link, useMatch} from "react-router-dom";
 import {css} from "glamor";
 import styles from "./MenuLinkButtons.module.css"
 
 
 export default function MenuLinkButtons(props) {
 	
-	const location = useLocation()
-	
 	const match = useMatch({
 		path: `/${props.linkRouting}`,
 		end: props.linkRouting.length === 0
 	})
 	
-	let ActiveButton = {boxShadow: `0 0 20px ${props.ActiveColor}`, background: props.ActiveColor}
-	
-	let MatchCondition = match ? `${styles.button} ${styles.buttonActive} ` : `${styles.button} `
-	
-	let MobileCondition = props.IsMobile ? `${styles.mobile}` : ''
+	const ActiveButton = {boxShadow: `0 0 20px ${props.ActiveColor}`, background: props.ActiveColor},
+		MatchCondition = match ? `${styles.button} ${styles.buttonActive} ` : `${styles.button} `,
+		MobileCondition = props.IsMobile ? `${styles.mobile}` : ''
 	
 	if (props.title === 'Настройки') {
 		return (
@@ -26,7 +22,7 @@ export default function MenuLinkButtons(props) {
 				style={{background: 'none'}}
 				onClick={props.SettingsClick}
 			>
-				<img src={`${props.src}`} className={styles.button_img}
+				<img alt="" src={`${props.src}`} className={styles.button_img}
 				     style={{filter: 'invert(0)', width: '27px', height: '27px', borderRadius: '50%'}}/>
 			</button>
 		)

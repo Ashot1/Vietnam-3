@@ -1,19 +1,19 @@
-import {lazy, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import styles from './App.module.css';
 import Header from './components/header/header'
-import Menu from './components/header/menu/menu'
+import Menu from './components/menu/menu'
 import ModalWindow from "./components/UI/ModalWindow/modalWindow";
-import Form from "./components/UI/Form/Form";
+import LoginInfo from "./components/Settings/Form/LoginInfo";
 import Settings from "./components/Settings/Settings";
 import CreateMark from "./components/MarksList/CreateMarkForm/CreateMarkForm";
-
-const Routing = lazy(() => import("./Routing"))
+import Routing from "./routing/routing"
+import {Toaster} from "react-hot-toast";
 
 
 export default function App() {
-	const [MenuOpen, setMenuOpen] = useState(false)
-	const [SettingsState, setSettingsState] = useState(false)
-	const [CreateMarkActive, setCreateMarkActive] = useState(false)
+	const [MenuOpen, setMenuOpen] = useState(false),
+		[SettingsState, setSettingsState] = useState(false),
+		[CreateMarkActive, setCreateMarkActive] = useState(false)
 	
 	const ChangeCreateModal = () => {
 		setCreateMarkActive(!CreateMarkActive)
@@ -40,19 +40,30 @@ export default function App() {
 	
 	return (
 		<div className={styles.app}>
+			<Toaster
+				position="bottom-center"
+				reverseOrder={true}/>
 			<Header BurgerChange={MenuActivation} SettingChange={setSetting}/>
 			<Menu MenuChanges={MenuOpen} setSetting={setSetting}/>
-			{SettingsState ? <ModalWindow
-				CloseSetting={CloseSetting}
-				classModal={styles.SettingModal}
-			>
-				<div className={styles.user}>
-					<Form/>
-				</div>
-				<Settings/>
-			</ModalWindow> : null}
+			<SettingModal SettingsState={SettingsState} CloseSetting={CloseSetting}/>
 			<CreateMark CreateMarkActive={CreateMarkActive} ChangeCreateModal={ChangeCreateModal}/>
+			{/*<Suspense fallback={<Preloader/>}>*/}
 			<Routing ChangeCreateModal={ChangeCreateModal}/>
+			{/*</Suspense>*/}
 		</div>
 	);
+}
+
+function SettingModal({SettingsState, CloseSetting}) {
+	if (SettingsState) return (
+		<ModalWindow
+			CloseSetting={CloseSetting}
+			classModal={styles.SettingModal}
+		>
+			<div className={styles.user}>
+				<LoginInfo/>
+			</div>
+			<Settings/>
+		</ModalWindow>
+	)
 }

@@ -2,7 +2,6 @@ import {createContext, memo} from "react";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {getAuth} from "firebase/auth";
 
-
 export const AuthContext = createContext()
 
 export default memo(function AuthProvider({children}) {

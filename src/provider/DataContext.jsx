@@ -7,14 +7,15 @@ export const DataContext = createContext()
 
 export default memo(function DataProvider({children, User}) {
 	
-	const MarkQuery = query(collection(db, "Marks"), where("id", "==", User.uid));
-	const [values, loading, error, snapshot] = useCollectionData(MarkQuery)
-	const [MarkArr, setMarkArr] = useState([])
+	const MarkQuery = query(collection(db, "Marks"), where("id", "==", User.uid)),
+		[values, loading, error, snapshot] = useCollectionData(MarkQuery),
+		[MarkArr, setMarkArr] = useState([])
 	
 	useEffect(() => {
 		if (!values) return
-		let MarkArray = []
-		let ids = []
+		let MarkArray = [],
+			ids = []
+		
 		snapshot.forEach((d) => {
 			ids.push(d.id)
 		})
@@ -28,11 +29,6 @@ export default memo(function DataProvider({children, User}) {
 			})
 		}
 		
-		const options = {
-			day: 'numeric',
-			month: 'numeric',
-			year: 'numeric'
-		}
 		setMarkArr(MarkArray.sort((a, b) => {
 			let dateA = new Date(a.CreateAt), dateB = new Date(b.CreateAt)
 			return dateA - dateB
