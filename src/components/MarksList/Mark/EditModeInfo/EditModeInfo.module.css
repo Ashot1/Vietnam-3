@@ -56,7 +56,7 @@
     padding: 0 0 40px 0;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
     .ButtonPosition {
         gap: 15px;
     }

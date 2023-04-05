@@ -1,9 +1,9 @@
 import styles from "./MarksList.module.css";
 import {memo, useContext, useEffect, useState} from "react";
 import {DataContext} from "../../provider/DataContext";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import LoadingData from "../../hoc/LoadingData";
-import {motion} from "framer-motion"
+import {motion, useAnimate} from "framer-motion"
 import Selector from "../UI/Selector/Selector";
 import UseRelativeTime from "../../hooks/useRelativeTime";
 
@@ -61,11 +61,18 @@ const PlusButton = memo(function PlusButton({HoverEffect, ChangeCreateModal}) {
 })
 
 function MarkTemplate({todo, HoverEffect, date}) {
+	const navigate = useNavigate()
+	const [scope, animate] = useAnimate()
+	
+	const AnimateClick = () => {
+		animate('article', {scale: 2, zIndex: 3, opacity: 0})
+	}
+	
 	return (
-		<Link to={`/Todo/Marks/${todo.id}`} style={{textDecoration: 'none'}}>
+		<Link to='' style={{textDecoration: 'none'}} ref={scope}
+		      onClick={() => setTimeout(() => navigate(`/Todo/Marks/${todo.id}`), 100)}>
 			<motion.article className={styles.TodoLi}
 			                onMouseMove={HoverEffect}
-			                whileTap={{scale: 1.5, opacity: 0}}
 			                initial={{opacity: 0}}
 			                animate={{
 				                opacity: 1,
@@ -73,7 +80,8 @@ function MarkTemplate({todo, HoverEffect, date}) {
 					                duration: .4,
 					                delay: .1
 				                }
-			                }}>
+			                }}
+			                onClick={AnimateClick}>
 				<h1>{todo.title}</h1>
 				<p>{todo.Content}</p>
 				<b>{date}</b>

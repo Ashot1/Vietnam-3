@@ -49,6 +49,7 @@
 }
 
 .TodoUl {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, clamp(170px, 30%, 700px));
     grid-column-gap: 2.5%;
@@ -81,23 +82,27 @@
 }
 
 @media (max-width: 500px) {
+    .Wrapper {
+        width: 95%;
+    }
+
     .TodoUl {
         text-align: center;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 95%);
     }
 
     .TodoLi p {
         -webkit-line-clamp: 4;
     }
 
+
 }
 
 @media (max-width: 300px) {
-    .TodoUl {
-        text-align: center;
+    .Wrapper {
         width: 95%;
-        grid-template-columns: repeat(1, 225px);
     }
+
 }
 
 .Wrapper {

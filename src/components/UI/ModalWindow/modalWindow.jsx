@@ -10,10 +10,9 @@ export default function ModalWindow({CloseSetting, children, classModal}) {
 			<motion.div
 				className={`${styles.content} ${classModal}`}
 				onClick={(e) => e.stopPropagation()}
-				initial={{scale: 0}}
+				initial={{scale: 0.5}}
 				animate={{scale: 1}}
 				exit={{scale: 0}}
-				transition={{duration: .2}}
 			>
 				{children}
 				<div className={styles.btnPos} onClick={CloseSetting}>
