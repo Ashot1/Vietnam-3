@@ -11,9 +11,9 @@
 }
 
 .content {
-    width: clamp(850px, 70%, 2000px);
+    width: clamp(950px, 70%, 1100px);
     display: flex;
-    gap: 10%;
+    justify-content: space-between;
 }
 
 .list {

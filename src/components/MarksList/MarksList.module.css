@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
 
 .TodoLi h1 {
     font-family: 'Raleway', sans-serif;
@@ -12,7 +14,7 @@
     content: "";
     background: radial-gradient(
             800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(0, 0, 0, 0.07),
+            rgba(0, 0, 0, 0.1),
             transparent 50%
     );
     height: 100%;
@@ -23,6 +25,7 @@
     left: 0;
     opacity: 0;
     transition: 0.2s;
+    border-radius: 10px;
 }
 
 .TodoLi p {
@@ -30,7 +33,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    font-family: 'Signika', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .TodoLi span {
@@ -46,15 +49,12 @@
 }
 
 .TodoUl {
-    list-style-type: none;
-    padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, clamp(170px, 30%, 700px));
     grid-column-gap: 2.5%;
-    grid-row-gap: 25px;
-    background: var(--backgroundC);
-    border-radius: 15px;
+    grid-row-gap: 55px;
     justify-content: center;
+    margin-top: 120px;
 }
 
 .TodoLi {
@@ -62,7 +62,6 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
-    height: auto;
     min-height: 190px;
     padding: 10px;
     position: relative;
@@ -71,7 +70,8 @@
 }
 
 .TodoLi b {
-    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 @media (max-width: 768px) and (min-width: 500px) {
@@ -83,7 +83,6 @@
 @media (max-width: 500px) {
     .TodoUl {
         text-align: center;
-        width: 95%;
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -93,3 +92,27 @@
 
 }
 
+@media (max-width: 300px) {
+    .TodoUl {
+        text-align: center;
+        width: 95%;
+        grid-template-columns: repeat(1, 225px);
+    }
+}
+
+.Wrapper {
+    background: var(--backgroundC);
+    padding: 30px 10px 60px 10px;
+    border-radius: 15px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.options {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}

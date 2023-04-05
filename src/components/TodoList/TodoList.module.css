@@ -6,6 +6,7 @@
     display: flex;
     background: var(--backgroundC);
     border-radius: 15px;
+    margin-top: 50px;
 }
 
 .TodoLi {

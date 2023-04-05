@@ -2,6 +2,7 @@ import styles from './calculatorPage.module.css'
 import Calculator from "../../components/calculator/calculator";
 import {memo, useState} from "react";
 import Background from "../../components/UI/Background/Background";
+import AnimatedMain from "../../components/AnimatedMain/AnimatedMain";
 
 export default memo(function CalculatorPage(props) {
 	
@@ -13,7 +14,7 @@ export default memo(function CalculatorPage(props) {
 	}
 	
 	return (
-		<main className={styles.main}>
+		<AnimatedMain mainstyles={styles.main}>
 			<div className={styles.content}>
 				<Calculator History={HistoryMove} ChangedHistory={ChangeHistory}/>
 				<List>
@@ -28,7 +29,7 @@ export default memo(function CalculatorPage(props) {
 					})}
 				</List>
 			</div>
-		</main>
+		</AnimatedMain>
 	)
 })
 

@@ -1,0 +1,51 @@
+
+.Navigation {
+    display: flex;
+    align-items: flex-end;
+    height: 60px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.backButton {
+    margin-left: 15px;
+}
+
+.backButton img {
+    width: 35px;
+    height: 30px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.backButton img:hover {
+    transition: .4s;
+    opacity: .4;
+}
+
+.wrapper {
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+}
+
+.wrapper button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.wrapper button img {
+    transition: .4s;
+    width: 30px;
+    height: 30px;
+}
+
+.wrapper button:hover img {
+    transition: .4s;
+    opacity: .4;
+}
+
+.EditIMG {
+    transform: rotate(90deg);
+}

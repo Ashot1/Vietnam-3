@@ -1,25 +1,26 @@
 import styles from "./todo.module.css";
 import {Link, Navigate, Outlet, useLocation, useMatch} from "react-router-dom";
-import {useContext} from "react";
-import {AuthContext} from "../../provider/AuthContext";
-import NeedAccountMessage from "../../components/NeedAccountMessage/NeedAccountMessage";
 import DataProvider from "../../provider/DataContext"
+import PrivatePage from "../../hoc/PrivatePage";
+import AnimatedMain from "../../components/AnimatedMain/AnimatedMain";
+
 
 export default function TodoPage({ChangeCreateModal}) {
 	const location = useLocation()
-	const User = useContext(AuthContext)
 	
 	if (location.pathname === '/Todo') return <Navigate replace to="/Todo/Marks"/>
 	
 	return (
-		<main className={styles.main}>
+		<AnimatedMain mainstyles={styles.main}>
 			<div className={styles.content}>
 				<Menu/>
-				{User ? <DataProvider User={User}>
-					<Outlet/>
-				</DataProvider> : <NeedAccountMessage/>}
+				<PrivatePage>
+					<DataProvider>
+						<Outlet/>
+					</DataProvider>
+				</PrivatePage>
 			</div>
-		</main>
+		</AnimatedMain>
 	);
 }
 

@@ -48,7 +48,7 @@
 }
 
 .Download:hover > a > p {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.8);
     transition: 0.4s;
 }
 

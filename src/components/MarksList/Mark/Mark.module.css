@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 .Mark {
     padding: 50px;
@@ -5,20 +7,13 @@
     border-radius: 15px;
     min-height: 650px;
     margin-top: 50px;
+    max-width: 800px;
 }
 
 @media (max-width: 500px) {
     .Mark {
         padding: 10px;
     }
-}
-
-.Navigation {
-    display: flex;
-    align-items: flex-end;
-    height: 60px;
-    justify-content: space-between;
-    margin-bottom: 50px;
 }
 
 .info {
@@ -29,47 +24,7 @@
     align-items: center;
 }
 
-.backButton {
-    margin-left: 15px;
-}
-
-.backButton img {
-    width: 27px;
-    height: 25px;
-    transition: .4s;
-    cursor: pointer;
-}
-
-.backButton img:hover {
-    transition: .4s;
-    opacity: .4;
-}
-
-.wrapper {
-    display: flex;
-    gap: 10px;
-    margin-right: 25px;
-}
-
-.wrapper button {
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.wrapper button img {
-    transition: .4s;
-    width: 27px;
-    height: 27px;
-}
-
-.wrapper button:hover img {
-    transition: .4s;
-    opacity: .4;
-}
-
-.info h2,
-.TitleArea {
+.info h2 {
     transition: .2s;
     background: rgb(196, 137, 59);
     padding: 15px;
@@ -80,52 +35,51 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.info h2:hover {
-    transition: .2s;
-    opacity: .8;
+.info h2 {
     cursor: pointer;
 }
 
-.TitleArea {
-    resize: none;
-    outline: none;
-    width: 95%;
-    height: 100px;
-    font-size: 18px;
-}
-
-.ContentArea {
-    resize: none;
-    margin-top: 30px;
-    margin-bottom: 25px;
-    width: 95%;
-    height: 500px;
+.info p {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .info p {
-    color: rgba(0, 0, 0, 0.81)
-}
-
-.info p,
-.ContentArea {
-    font-family: 'Signika', sans-serif;
-    border: 2px solid rgba(0, 0, 0, 0.51);
+    background: rgb(242, 242, 242);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(0, 0, 0, 0.71);
     padding: 15px;
     border-radius: 10px;
     transition: .2s;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+}
+
+@media (max-width: 300px) {
+    .info p {
+        width: 90%;
+    }
 }
 
 .info p:hover {
     cursor: pointer;
-    border: 2px solid black;
-    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.49);
     transition: .2s;
 }
 
 .info span {
-    font-weight: 600;
     font-size: 20px;
     width: 100%;
     text-align: center;
     margin-bottom: 150px;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 25px;
+}
+
+.info span::selection {
+    color: rgba(255, 255, 255, 0.73);
+    background-color: rgba(0, 0, 0, 0.77);
 }

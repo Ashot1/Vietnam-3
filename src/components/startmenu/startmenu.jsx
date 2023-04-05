@@ -1,10 +1,10 @@
 import styles from './startmenu.module.css';
-import {useState} from "react";
+import {useMemo} from "react";
 import {Link} from 'react-router-dom';
 
 export default function StartMenu(props) {
 	
-	const [BlockLinks, setBlockLinks] = useState([
+	const BlockLinks = useMemo(() => [
 		{Count: 1, link: 'SocialRatingMiner', background: '/images/StartMenu/china.jpg', text: 'Social Rating Miner'},
 		{Count: 2, link: 'Console', background: '/images/StartMenu/code-editoren-t.jpg', text: 'Console'},
 		{Count: 3, link: 'Calculator', background: '/images/StartMenu/calculator_icon.png', text: 'Calculator'},
@@ -22,7 +22,7 @@ export default function StartMenu(props) {
 			background: '/images/StartMenu/Vietnam2.png',
 			text: 'Vietnam 2'
 		},
-	])
+	], [])
 	return (
 		<div className={styles.Startmenu}>
 			{BlockLinks.map(item => {

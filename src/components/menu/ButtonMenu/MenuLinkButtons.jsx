@@ -33,9 +33,13 @@ export default function MenuLinkButtons(props) {
 		<Link to={`/${props.linkRouting}`}
 		      className={`${MatchCondition} ${MobileCondition}`}
 		      title={props.title}
-		      {...css(match ? ActiveButton : {":hover": ActiveButton})}
+		      {...css(match
+			      ? ActiveButton
+			      :
+			      {":hover": ActiveButton}
+		      )}
 		>
-			<img src={`${props.src}`} className={styles.button_img}/>
+			<img alt="" src={`${props.src}`} className={styles.button_img}/>
 		</Link>
 	)
 }

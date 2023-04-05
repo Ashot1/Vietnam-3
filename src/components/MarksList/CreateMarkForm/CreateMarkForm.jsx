@@ -3,6 +3,8 @@ import {AuthContext} from "../../../provider/AuthContext";
 import ModalWindow from "../../UI/ModalWindow/modalWindow";
 import styles from "./CreateMarkForm.module.css";
 import UseAddCollection from "../../../hooks/useAddCollection";
+import WaveButton from "../../UI/WaveButton/WaveButton";
+import {AnimatePresence} from "framer-motion"
 
 export default function CreateMark({CreateMarkActive, ChangeCreateModal}) {
 	
@@ -22,31 +24,31 @@ export default function CreateMark({CreateMarkActive, ChangeCreateModal}) {
 		}
 		
 	}
-	if (CreateMarkActive) return (
-		<ModalWindow CloseSetting={ChangeCreateModal} classModal={styles.CreateMarksModal}>
-			<section><h2>Создать заметку</h2></section>
-			<section>
-				<form action="src/components/MarksList/CreateMarkForm/CreateMarkForm">
-					<div className={styles.inputbox}>
-						<input
-							required="required"
-							type="text"
-							value={Title}
-							onChange={(e) => setTitle(e.target.value)}/>
-						<span>Название</span>
-						<i></i>
-					</div>
-					<textarea
-						placeholder="Заметка"
-						value={Content} onChange={(e) => setContent(e.target.value)}
-						required="required">
+	return (
+		<AnimatePresence>
+			{CreateMarkActive && <ModalWindow CloseSetting={ChangeCreateModal} classModal={styles.CreateMarksModal}>
+				<section><h2>Создать заметку</h2></section>
+				<section>
+					<form action="src/components/MarksList/CreateMarkForm/CreateMarkForm">
+						<div className={styles.inputbox}>
+							<input
+								required="required"
+								type="text"
+								value={Title}
+								onChange={(e) => setTitle(e.target.value)}/>
+							<span>Название</span>
+							<i></i>
+						</div>
+						<textarea
+							placeholder="Заметка"
+							value={Content} onChange={(e) => setContent(e.target.value)}
+							required="required">
 				</textarea>
-					<button className={styles.button2} onClick={SendData}>
-						Создать
-					</button>
-				</form>
-			</section>
-		</ModalWindow>
+						<WaveButton onclick={SendData}>Создать</WaveButton>
+					</form>
+				</section>
+			</ModalWindow>}
+		</AnimatePresence>
 	)
 	
 }

@@ -8,6 +8,7 @@ import Settings from "./components/Settings/Settings";
 import CreateMark from "./components/MarksList/CreateMarkForm/CreateMarkForm";
 import Routing from "./routing/routing"
 import {Toaster} from "react-hot-toast";
+import {AnimatePresence} from "framer-motion"
 
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
 		}
 	}, [])
 	
+	
 	return (
 		<div className={styles.app}>
 			<Toaster
@@ -55,15 +57,17 @@ export default function App() {
 }
 
 function SettingModal({SettingsState, CloseSetting}) {
-	if (SettingsState) return (
-		<ModalWindow
-			CloseSetting={CloseSetting}
-			classModal={styles.SettingModal}
-		>
-			<div className={styles.user}>
-				<LoginInfo/>
-			</div>
-			<Settings/>
-		</ModalWindow>
+	return (
+		<AnimatePresence>
+			{SettingsState && <ModalWindow
+				CloseSetting={CloseSetting}
+				classModal={styles.SettingModal}
+			>
+				<div className={styles.user}>
+					<LoginInfo/>
+				</div>
+				<Settings/>
+			</ModalWindow>}
+		</AnimatePresence>
 	)
 }

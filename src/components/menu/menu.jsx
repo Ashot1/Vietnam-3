@@ -1,43 +1,55 @@
 import styles from './menu.module.css'
-import {CSSTransition} from "react-transition-group";
 import MenuLinkButtons from "./ButtonMenu/MenuLinkButtons";
 import {useContext, useMemo} from "react";
 import {AuthContext} from "../../provider/AuthContext";
+import {AnimatePresence, motion} from 'framer-motion'
 
 
 export default function Menu({MenuChanges, setSetting}) {
 	
 	const MenuStyleCondition = useMemo(() => localStorage.getItem('Mobile Menu') === 'upper', [localStorage.getItem('Mobile Menu')]),
 		MenuStyle = MenuStyleCondition ? styles.menu : styles.MenuBottom,
-		MenuMobileCondition = !MenuStyleCondition && window.matchMedia("(max-width: 768px)").matches,
+		MatchQuery = window.matchMedia("(max-width: 768px)").matches,
+		MenuMobileCondition = !MenuStyleCondition && MatchQuery,
 		User = useContext(AuthContext),
-		Logo = User ? User.photoURL : '/images/menu/user.png'
-	
+		Logo = User ? User.photoURL : '/images/menu/user.png',
+		MenuVariantAnimation = {
+			hidden: i => ({
+				x: i ? 0 : -150,
+				y: i ? -62 : 0,
+				transition: {duration: .4}
+			}),
+			visible: i => ({
+				x: 0,
+				y: 0,
+				transition: {duration: .4}
+			})
+		}
 	return (
-		<CSSTransition
-			in={MenuMobileCondition ? true : MenuChanges}
-			timeout={400}
-			classNames={{
-				enterActive: `${styles.menu_open_start}`,
-				exitActive: `${styles.menu_close_start}`,
-			}}
-			unmountOnExit
-		>
-			<div className={MenuStyle}>
-				<div className={styles.menuButtons}>
-					{MenuMobileCondition && <MenuLinkButtons key={1} src='/images/menu/home2.png'
-					                                         title="Главная"
-					                                         linkRouting=""
-					                                         ActiveColor="#42AAFF"
-					/>}
-					<StandartMenu/>
-					{MenuMobileCondition && <MenuLinkButtons key={7} src={Logo}
-					                                         title="Настройки"
-					                                         linkRouting=""
-					                                         SettingsClick={setSetting}/>}
-				</div>
-			</div>
-		</CSSTransition>
+		<AnimatePresence initial={!MenuMobileCondition}>
+			{(MenuMobileCondition ? true : MenuChanges)
+				&& <motion.div className={MenuStyle}
+				               initial={'hidden'}
+				               animate={'visible'}
+				               exit={'hidden'}
+				               variants={MenuVariantAnimation}
+				               custom={MatchQuery}>
+					<div className={styles.menuButtons}>
+						{MenuMobileCondition
+							&& <MenuLinkButtons key={1}
+							                    src='/images/menu/home2.png'
+							                    title="Главная"
+							                    linkRouting=""
+							                    ActiveColor="#42AAFF"/>}
+						<StandartMenu/>
+						{MenuMobileCondition
+							&& <MenuLinkButtons key={7} src={Logo}
+							                    title="Настройки"
+							                    linkRouting=""
+							                    SettingsClick={setSetting}/>}
+					</div>
+				</motion.div>}
+		</AnimatePresence>
 	)
 }
 

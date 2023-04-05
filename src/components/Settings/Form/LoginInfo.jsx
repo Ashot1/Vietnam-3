@@ -2,6 +2,7 @@ import styles from './LoginInfo.module.css'
 import {memo, useContext} from "react";
 import {getAuth, GoogleAuthProvider, signInWithPopup, signOut} from "firebase/auth";
 import {AuthContext} from "../../../provider/AuthContext";
+import toast from "react-hot-toast";
 
 
 export default memo(function LoginInfo({background}) {
@@ -9,8 +10,22 @@ export default memo(function LoginInfo({background}) {
 		provider = new GoogleAuthProvider(),
 		User = useContext(AuthContext)
 	
-	const Login = () => {
-		signInWithPopup(auth, provider)
+	const Login = async () => {
+		await toast.promise(
+			signInWithPopup(auth, provider),
+			{
+				loading: 'Авторизация...',
+				success: <b>Вы успешно вошли в свой аккаунт!</b>,
+				error: <b>Ошибка входа</b>,
+			},
+			{
+				style: {
+					borderRadius: '10px',
+					background: '#333',
+					color: '#fff',
+				},
+			}
+		);
 	}
 	
 	return (
@@ -42,8 +57,22 @@ function AccountInfo({user, auth, SetUser}) {
 				<section>
 					<h2>{user.displayName}</h2>
 					<span>Зарегистрирован {RegisterDate(user.metadata.creationTime)}</span>
-					<button className={styles.noselect} onClick={() => {
-						signOut(auth);
+					<button className={styles.noselect} onClick={async () => {
+						await toast.promise(
+							signOut(auth),
+							{
+								loading: 'Выход...',
+								success: <b>Вы вышли из своего аккаунта!</b>,
+								error: <b>Ошибка</b>,
+							},
+							{
+								style: {
+									borderRadius: '10px',
+									background: '#333',
+									color: '#fff',
+								},
+							}
+						);
 					}}><span className={styles.text}>Выйти</span><span className={styles.icon}><svg
 						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path
 						d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span>

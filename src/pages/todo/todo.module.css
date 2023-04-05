@@ -11,8 +11,8 @@
     display: flex;
     position: relative;
     justify-content: center;
-    height: 100vh;
     padding-top: 50px;
+    padding-bottom: 200px;
 }
 
 .content {
@@ -28,21 +28,8 @@
     }
 
     .main {
-        padding-top: 150px;
+        padding-top: 60px;
         align-items: start;
-    }
-
-}
-
-@media (max-width: 375px) {
-    .main {
-        padding-top: 150px;
-    }
-}
-
-@media (max-width: 300px) {
-    .main {
-        padding-top: 150px;
     }
 
 }

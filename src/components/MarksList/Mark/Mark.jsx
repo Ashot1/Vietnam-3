@@ -1,11 +1,14 @@
 import styles from "./Mark.module.css";
 import {useNavigate, useParams} from "react-router-dom";
-import {memo, useContext, useEffect, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import {DataContext} from "../../../provider/DataContext";
 import Loading from "../../Loading/Loading";
 import {deleteDoc, doc, updateDoc} from "firebase/firestore";
 import {db} from "../../../firebase";
 import toast from "react-hot-toast";
+import {motion} from 'framer-motion'
+import MarkMenu from "./MarkMenu/MarkMenu";
+import EditModeInfo from "./EditModeInfo/EditModeInfo";
 
 
 export default function Mark(props) {
@@ -15,8 +18,19 @@ export default function Mark(props) {
 		CurrentMark = MarkArr.find(d => d.id === MarkId),
 		[EditMode, setEditMode] = useState(false),
 		[NewData, setNewData] = useState({}),
-		AreaVisibility = EditMode ? 'block' : 'none',
-		BlocksVisibility = EditMode ? 'none' : 'block'
+		ScrollToTop = useRef(),
+		variantAnimation = {
+			visible: {
+				opacity: 1
+			},
+			hidden: {
+				opacity: 0
+			}
+		}
+	
+	useEffect(() => {
+		window.scrollTo(0, ScrollToTop)
+	}, [])
 	
 	useEffect(() => {
 		if (!CurrentMark) return
@@ -35,58 +49,102 @@ export default function Mark(props) {
 	}
 	
 	const DeleteMark = async () => {
-		await deleteDoc(doc(db, "Marks", MarkId));
+		await toast.promise(
+			deleteDoc(doc(db, "Marks", MarkId)),
+			{
+				loading: 'Удаление...',
+				success: <b>Заметка удалена!</b>,
+				error: <b>Ошибка</b>,
+			},
+			{
+				style: {
+					borderRadius: '10px',
+					background: '#333',
+					color: '#fff',
+				},
+			}
+		);
 		await navigate('/Todo/Marks')
 	}
 	
-	const EditMark = async () => {
+	const EditMark = () => {
 		if (EditMode) {
-			await updateDoc(doc(db, "Marks", MarkId), {title: NewData.title, Content: NewData.content});
+			CanceledEdit()
+			return
 		}
-		setEditMode(!EditMode)
+		setEditMode(true)
+	}
+	
+	const CanceledEdit = () => {
+		setEditMode(false)
+		setNewData({title: CurrentMark.title, content: CurrentMark.Content})
+	}
+	
+	const ChangeTitle = (e) => {
+		setNewData({...NewData, title: e.target.value})
+	}
+	
+	const ChangeContent = (e) => {
+		setNewData({
+			...NewData,
+			content: e.target.value
+		})
+	}
+	
+	const SaveData = async () => {
+		await updateDoc(doc(db, "Marks", MarkId), {title: NewData.title, Content: NewData.content});
+		setEditMode(false)
+		toast.success('Изменения сохранены!', {
+			style: {
+				borderRadius: '10px',
+				background: '#333',
+				color: '#fff',
+			},
+		})
 	}
 	
 	return (
 		<div className={styles.Mark}>
-			<Menu navigate={navigate} DeleteMark={DeleteMark} EditMark={EditMark} EditMode={EditMode}/>
-			{CurrentMark ? <section className={styles.info}>
-				<h2 style={{display: BlocksVisibility}}
-				    onClick={copy}>{CurrentMark.title}</h2>
-				
-				<textarea style={{display: AreaVisibility}}
-				          className={styles.TitleArea}
-				          value={NewData.title}
-				          onChange={(e) => setNewData({...NewData, title: e.target.value})}></textarea>
-				
-				<p style={{display: BlocksVisibility}}
-				   onClick={copy}>{CurrentMark.Content}</p>
-				
-				<textarea style={{display: AreaVisibility}}
-				          className={styles.ContentArea}
-				          value={NewData.content}
-				          onChange={(e) => setNewData({...NewData, content: e.target.value})}></textarea>
-				
-				<span>{CurrentMark.CreateAt}</span>
-			</section> : <Loading/>}
+			<MarkMenu navigate={navigate} DeleteMark={DeleteMark} EditMark={EditMark} EditMode={EditMode}/>
+			{CurrentMark ?
+				<section className={styles.info}>
+					<DefaultInfo EditMode={EditMode} copy={copy} variantAnimation={variantAnimation}
+					             ScrollToTop={ScrollToTop} CurrentMark={CurrentMark}/>
+					
+					<EditModeInfo EditMode={EditMode} variantAnimation={variantAnimation} SaveData={SaveData}
+					              CanceledEdit={CanceledEdit} NewData={NewData} ChangeTitle={ChangeTitle}
+					              ChangeContent={ChangeContent}/>
+					
+					<motion.span initial='hidden'
+					             animate='visible'
+					             variants={variantAnimation}>{CurrentMark.CreateAt}</motion.span>
+				</section> : <Loading/>}
 		</div>
 	)
 }
 
-const Menu = memo(function Menu({navigate, EditMark, DeleteMark, EditMode}) {
+
+function DefaultInfo(props) {
+	const {EditMode, copy, variantAnimation, ScrollToTop, CurrentMark} = props,
+		BlocksVisibility = EditMode ? 'none' : 'block'
 	
 	return (
-		<section className={styles.Navigation}>
-			<nav onClick={() => navigate('/Todo/Marks')} className={styles.backButton}>
-				<img src="/images/MarkList/free-icon-arrow-6529018.png" alt=""/>
-			</nav>
-			<nav className={styles.wrapper}>
-				<button title="Редактировать" onClick={EditMark} style={EditMode ? {opacity: '.4'} : null}>
-					<img src="/images/MarkList/free-icon-edit-992664.png" alt=""/>
-				</button>
-				<button title="Удалить" onClick={DeleteMark}>
-					<img src="/images/MarkList/free-icon-recycle-bin-3156999.png" alt=""/>
-				</button>
-			</nav>
-		</section>
+		<>
+			<motion.h2 style={{display: BlocksVisibility}}
+			           onClick={copy}
+			           whileTap={{scale: 0.9}}
+			           initial='hidden'
+			           animate='visible'
+			           variants={variantAnimation}
+			           whileHover={{opacity: .7}}
+			           ref={ScrollToTop}>{CurrentMark.title}</motion.h2>
+			<motion.p style={{display: BlocksVisibility}}
+			          onClick={copy}
+			          whileTap={{scale: 0.95}}
+			          initial='hidden'
+			          animate='visible'
+			          variants={variantAnimation}>{CurrentMark.Content}</motion.p>
+		</>
 	)
-})
+}
+

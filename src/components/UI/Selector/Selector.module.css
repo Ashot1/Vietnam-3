@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.selector {
+    cursor: pointer;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+.selector article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.selector article button {
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+}
+
+.selector p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Arrow {
+    width: 25px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Arrow::before {
+    content: "";
+    width: 13px;
+    height: 2px;
+    position: absolute;
+    background: white;
+    transform: rotate(-40deg);
+}
+
+.Arrow::after {
+    content: "";
+    width: 13px;
+    height: 2px;
+    position: absolute;
+    background: white;
+    margin-left: 9px;
+    transform: rotate(40deg);
+}

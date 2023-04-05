@@ -31,3 +31,7 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.43); /* цвет бегунка */
     border-radius: 1px; /* округлось бегунка */
 }
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
