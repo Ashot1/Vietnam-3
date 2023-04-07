@@ -11,16 +11,16 @@ export default function StartMenu(props) {
 		{Count: 4, link: 'Download', background: '/images/StartMenu/download.jpeg', text: 'Download'},
 		{Count: 5, link: 'Todo', background: '/images/StartMenu/list.jpg', text: 'Todo list'},
 		{
-			Count: 6,
-			link: 'https://vietnamcorp.github.io/VietnamCorp/',
-			background: '/images/StartMenu/Vietnam1.png',
-			text: 'Vietnam 1'
-		},
-		{
 			Count: 7,
 			link: 'https://tvoyotec.github.io/Vietnam2/index.html',
 			background: '/images/StartMenu/Vietnam2.png',
 			text: 'Vietnam 2'
+		},
+		{
+			Count: 6,
+			link: 'https://vietnamcorp.github.io/VietnamCorp/',
+			background: '/images/StartMenu/Vietnam1.png',
+			text: 'Vietnam 1'
 		},
 	], [])
 	return (

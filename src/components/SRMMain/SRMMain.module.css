@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+.info {
+    width: 100%;
+    height: 120px;
+    display: grid;
+    place-items: center;
+}
+
+.info div {
+    background: white;
+    border-radius: 20px;
+    padding: 10px 25px 10px 25px;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 250px;
+    max-width: 90%;
+}
+
+@media (max-width: 300px) {
+    .info div {
+        min-width: 150px;
+    }
+}
+
+.info div p::selection {
+    color: rgba(255, 255, 255, 0.83);
+    background-color: rgba(255, 20, 45, 0.77);
+}
+
+.info div p {
+    flex-wrap: wrap;
+    word-break: break-all;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+
+.info div p:nth-child(2) {
+    color: green;
+}
+
+.info button {
+    margin-top: 25px;
+    background: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    border: 2px solid green;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+}
+
+.info button:hover {
+    transition: .3s;
+    text-shadow: 0 0 1px green;
+    box-shadow: 0 0 3px green;
+}
+
+.info button:hover {
+
+}
+
+.info button img {
+    width: 20px;
+    height: 20px;
+}
+
+.ButtonWrapper {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+}
+
+.ButtonWrapper button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.ButtonWrapper button img {
+    height: 250px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgb(180, 8, 56);
+}
+
+.ButtonWrapper button::before {
+    content: "";
+    position: absolute;
+    width: 49%;
+    height: 49%;
+    border-top-left-radius: 25px;
+    box-shadow: -1.5px -1.5px 5px rgb(1, 45, 106);
+}
+
+@media (max-width: 500px) {
+    .ButtonWrapper button img {
+        width: 85vw;
+        height: auto;
+    }
+
+}

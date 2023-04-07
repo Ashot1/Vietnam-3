@@ -11,11 +11,21 @@ export default async function UseAddCollection([content, title, Col, user]) {
 			second: 'numeric'
 		}),
 		date = new Date().toLocaleString('ru', options);
+	if (Col === 'Marks') {
+		const docRef = await addDoc(collection(db, Col), {
+			title: title,
+			Content: content,
+			id: user.uid,
+			CreateAt: date
+		});
+	}
+	if (Col === 'SRM') {
+		const docRef = await addDoc(collection(db, Col), {
+			Payday: title,
+			Credits: content,
+			id: user.uid,
+			CreateAt: date
+		});
+	}
 	
-	const docRef = await addDoc(collection(db, Col), {
-		title: title,
-		Content: content,
-		id: user.uid,
-		CreateAt: date
-	});
 }

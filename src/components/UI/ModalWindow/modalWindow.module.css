@@ -46,3 +46,8 @@
     cursor: pointer;
     transition: .2s;
 }
+
+.body {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}

@@ -14,7 +14,9 @@ export default function ModalWindow({CloseSetting, children, classModal}) {
 				animate={{scale: 1}}
 				exit={{scale: 0}}
 			>
-				{children}
+				<div className={styles.body}>
+					{children}
+				</div>
 				<div className={styles.btnPos} onClick={CloseSetting}>
 					<p>Закрыть</p>
 				</div>

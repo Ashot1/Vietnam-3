@@ -6,7 +6,7 @@ export default memo(function MarkMenu({navigate, EditMark, DeleteMark, EditMode}
 	return (
 		<section className={styles.Navigation}>
 			<nav onClick={() => navigate('/Todo/Marks')} className={styles.backButton}>
-				<img src="/images/MarkList/free-icon-back-3183312.png" alt="" className={styles.BackIMG}/>
+				<img src="/images/MarkList/free-icon-back-3183312.png" alt=""/>
 			</nav>
 			<nav className={styles.wrapper}>
 				<button title="Редактировать" onClick={EditMark} style={EditMode ? {opacity: '.4'} : null}>

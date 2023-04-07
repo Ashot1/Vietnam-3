@@ -40,12 +40,6 @@
 }
 
 .info p {
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-.info p {
     background: rgb(242, 242, 242);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(0, 0, 0, 0.71);
@@ -54,13 +48,23 @@
     transition: .2s;
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 500px) {
+    .info p {
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 300px) {
     .info p {
-        width: 90%;
+        max-width: 85%;
     }
 }
+
 
 .info p:hover {
     cursor: pointer;

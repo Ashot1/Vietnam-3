@@ -85,6 +85,12 @@
     }
 }
 
+@media (max-width: 300px) {
+    .Block {
+        font-size: 20px;
+    }
+}
+
 .Block p {
     z-index: 2;
     color: rgb(194, 193, 193);

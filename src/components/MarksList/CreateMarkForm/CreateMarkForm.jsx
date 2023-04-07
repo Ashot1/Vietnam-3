@@ -42,7 +42,8 @@ export default function CreateMark({CreateMarkActive, ChangeCreateModal}) {
 						<textarea
 							placeholder="Заметка"
 							value={Content} onChange={(e) => setContent(e.target.value)}
-							required="required">
+							required="required"
+							className={styles.textArea}>
 				</textarea>
 						<WaveButton onclick={SendData}>Создать</WaveButton>
 					</form>

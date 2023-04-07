@@ -6,13 +6,15 @@ export default function Slider() {
 	
 	const [SlideNumber, setSlideNumber] = useState(0),
 		image = useMemo(() => [
-			{url: '/images/slider/Armenia.jpg'},
-			{url: '/images/slider/hitler.jpg'},
-			{url: '/images/slider/KoshkaJena.jpg'},
-			{url: '/images/slider/Shreks.jpg'},
-			{url: '/images/slider/Ukrain.jpg'},
+			{url: '/images/slider/Подкрадули.jpg'},
+			{url: '/images/slider/Wensday.jpeg'},
 			{url: '/images/slider/viktor-korneplod.jpg'},
 			{url: '/images/slider/Папич.jpg'},
+			{url: '/images/slider/Armenia.jpg'},
+			{url: '/images/slider/KoshkaJena.jpg'},
+			{url: '/images/slider/Shreks.jpg'},
+			{url: '/images/slider/hitler.jpg'},
+			{url: '/images/slider/Ukrain.jpg'},
 			{url: ''}
 		], [])
 	
