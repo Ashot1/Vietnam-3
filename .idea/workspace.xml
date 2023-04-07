@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ee65d-5bf4-4a89-8a26-59a242d20540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Templates/TemplateName.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Templates/TemplateName.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider/slider.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/slider.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/startmenu/startmenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/startmenu/startmenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/startmenu/startmenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/startmenu/startmenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useAddCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAddCollection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SRM/SRM.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SRM/SRM.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SRM/SRMPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SRM/SRMPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +144,8 @@
       <workItem from="1680812923744" duration="10512000" />
       <workItem from="1680828170704" duration="2648000" />
       <workItem from="1680834748735" duration="4214000" />
-      <workItem from="1680869059579" duration="11079000" />
+      <workItem from="1680869059579" duration="11173000" />
+      <workItem from="1680884444647" duration="129000" />
     </task>
     <servers />
   </component>
