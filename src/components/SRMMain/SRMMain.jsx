@@ -30,14 +30,15 @@ export default function SrmMain({Payday, Credits, setCredits, setPayday}) {
 		if (values.length === 0) return await UseAddCollection([Credits, Payday, "SRM", User])
 		
 		
-		if (parseInt(values[0].Credits) >= parseInt(Credits) && parseInt(values[0].Payday) >= Payday ||
+		if ((parseInt(values[0].Credits) >= parseInt(Credits) && parseInt(values[0].Payday) >= Payday) ||
 			parseInt(values[0].Payday) > Payday) {
 			setCredits(values[0].Credits)
 			setPayday(values[0].Payday)
 			return
 		}
 		
-		if (parseInt(values[0].Credits) < parseInt(Credits) && parseInt(values[0].Payday) <= Payday) {
+		if ((parseInt(values[0].Credits) < parseInt(Credits) && parseInt(values[0].Payday) <= Payday) ||
+			parseInt(values[0].Payday) < Payday) {
 			await snapshot.forEach(item => {
 				updateDoc(doc(db, "SRM", item.id), {Credits: Credits, Payday: Payday})
 			})
