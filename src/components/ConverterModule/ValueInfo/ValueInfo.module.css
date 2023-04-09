@@ -1,0 +1,70 @@
+
+.ValueInfo {
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+
+.Course {
+    display: flex;
+    margin-top: 15px;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+
+.NewData {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #1F2937;
+    font-size: 25px;
+    line-height: 2.5rem;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.pastData b {
+    margin-left: 20px;
+    margin-right: 15px;
+    user-select: none;
+}
+
+.pastData {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    line-height: 2.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.39);
+}
+
+.percent {
+    font-weight: 600;
+    display: flex;
+}
+
+.percent svg {
+    margin-top: 2px;
+}
+
+.ValuteInfo {
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    gap: 25px;
+}
+
+.ValuteInfo h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.ValuteInfo h6 {
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.29);
+    font-size: 12px;
+    position: absolute;
+}

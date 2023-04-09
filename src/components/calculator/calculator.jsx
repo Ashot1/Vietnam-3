@@ -9,7 +9,7 @@ export default function Calculator({History, ChangedHistory}) {
 	const [Calculator, SetCalculator] = useState(''),
 		[Result, setResult] = useState('0'),
 		[InputFZ, setInputFZ] = useState(1),
-		ops = ['C', '*', '/', '«', '-', '+', '.', '(', ')']
+		ops = ['^', 'C', '*', '/', '«', '-', '+', '.', '(', ')', '√']
 	
 	const changeInput = () => {
 		setInputFZ(Calculator.length > 16 ? Calculator.length / 16 : 1)
@@ -43,7 +43,11 @@ export default function Calculator({History, ChangedHistory}) {
 		
 		if (huy.indexOf('=') > 0) huy[huy.indexOf('=')] = ''
 		
-		return Calculate(huy.join('')).toString()
+		try {
+			return Calculate(huy.join('')).toString()
+		} catch (e) {
+			return 'Error'
+		}
 	}, [])
 	
 	
@@ -63,27 +67,44 @@ export default function Calculator({History, ChangedHistory}) {
 		const btnData = value.target.innerText
 		if (btnData === '(') {
 			SetCalculator(Calculator + btnData)
+			return
 		}
 		if (btnData === ')') {
 			let Condition = (!ops.includes(Calculator.slice(-1)) && Calculator !== '') || Calculator.slice(-1) === ')'
 			if (!Condition) return
 			SetCalculator(Calculator + btnData)
+			return
 		}
-		if (ops.includes(btnData) && btnData !== 'C' && btnData !== '«' && btnData !== '(' && btnData !== ')' && btnData !== '=') {
-			let Condition = (!ops.includes(Calculator.slice(-1)) && Calculator !== '') || Calculator.slice(-1) === ')'
+		if (btnData === '^') {
+			let Condition = (!ops.includes(Calculator.slice(-1))) && Calculator !== ''
 			if (!Condition) return
-			if (Calculator.slice(-1) === ')' && btnData === ')') return
-			SetCalculator(Calculator + btnData)
+			SetCalculator(Calculator + "**")
+			return;
 		}
 		if (btnData === 'C') {
 			SetCalculator('')
 			setResult('0')
+			return
 		}
 		if (btnData === '«') {
 			SetCalculator(Calculator.slice(0, -1))
+			return
 		}
 		if (btnData === '=' && (!ops.includes(Calculator.slice(-1)) || Calculator.slice(-1) === ')')) {
 			resultBtn()
+			return
+		}
+		if (btnData === '√') {
+			let Condition = (!ops.includes(Calculator.slice(-1))) && Calculator !== ''
+			if (!Condition) return
+			SetCalculator(Calculator + "**(1/2)")
+			return
+		}
+		if (ops.includes(btnData)) {
+			let Condition = (!ops.includes(Calculator.slice(-1)) && Calculator !== '') || Calculator.slice(-1) === ')'
+			if (!Condition) return
+			if (Calculator.slice(-1) === ')' && btnData === ')') return
+			SetCalculator(Calculator + btnData)
 		}
 	}
 	
@@ -104,7 +125,6 @@ export default function Calculator({History, ChangedHistory}) {
 				       onChange={OnChangeInput}
 				       style={{fontSize: `${InputFZ < 2 ? 38 / InputFZ : 40 / 2}px`}}
 				       placeholder="0"
-				       inputMode="numeric"
 				/>
 			</div>
 			<Buttons ops={ops} change={change} changeNumber={ChangeNumber}/>
@@ -116,11 +136,12 @@ export default function Calculator({History, ChangedHistory}) {
 const Buttons = memo(function Buttons({ops, change, changeNumber}) {
 	
 	const buttons = [
-		ops.slice(0, 4),
-		['7', '8', '9', ops[4]],
-		['4', '5', '6', ops[5]],
+		ops.slice(1, 5),
+		['7', '8', '9', ops[5]],
+		['4', '5', '6', ops[6]],
 		['1', '2', '3', '='],
-		[ops[7], '0', ops[8], ops[6]]
+		['00', '0', ops[7]],
+		[ops[10], ops[0], ops[8], ops[9]]
 	]
 	
 	return (

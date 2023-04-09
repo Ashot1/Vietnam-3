@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ee65d-5bf4-4a89-8a26-59a242d20540" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Background/Background.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Background/Background.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calculator/CalculatorButton/CalculatorButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/CalculatorButton/CalculatorButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calculator/calculator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/calculator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SRM/SRM.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SRM/SRM.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/download/download.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/download/download.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/todo/todo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/todo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routing/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routing/routing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/routing.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +68,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\tltxd\\Desktop\\Vietnam-3\\public&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MTConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -59,11 +79,11 @@
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\header\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\ConverterModule" />
+      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\SRMMain" />
+      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\public\images\SRM" />
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\calculator" />
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\Settings" />
-      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\menu" />
-      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components" />
-      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\routing" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -146,6 +166,14 @@
       <workItem from="1680834748735" duration="4214000" />
       <workItem from="1680869059579" duration="11173000" />
       <workItem from="1680884444647" duration="129000" />
+      <workItem from="1680884917403" duration="817000" />
+      <workItem from="1680901715086" duration="5807000" />
+      <workItem from="1680923497467" duration="3315000" />
+      <workItem from="1680974892533" duration="25592000" />
+      <workItem from="1681014987198" duration="436000" />
+      <workItem from="1681015436227" duration="280000" />
+      <workItem from="1681015735109" duration="8713000" />
+      <workItem from="1681040838418" duration="6736000" />
     </task>
     <servers />
   </component>

@@ -1,46 +1,44 @@
 import styles from './calculatorPage.module.css'
-import Calculator from "../../components/calculator/calculator";
-import {memo, useState} from "react";
-import Background from "../../components/UI/Background/Background";
+import {memo} from "react";
 import AnimatedMain from "../../components/AnimatedMain/AnimatedMain";
+import {Link, Navigate, Outlet, useLocation, useMatch} from "react-router-dom";
 
 export default memo(function CalculatorPage(props) {
 	
-	const [History, setHistory] = useState([]),
-		[ChangeHistory, setChangeHistory] = useState('')
+	const location = useLocation()
 	
-	const HistoryMove = (value) => {
-		setHistory([...History, value])
-	}
+	if (location.pathname === '/Calculator') return <Navigate replace to="/Calculator/Calc"/>
 	
 	return (
 		<AnimatedMain mainstyles={styles.main}>
 			<div className={styles.content}>
-				<Calculator History={HistoryMove} ChangedHistory={ChangeHistory}/>
-				<List>
-					{History.map((obj, index) => {
-						return (
-							<li key={index} onClick={() => {
-								setChangeHistory(obj.nums)
-							}}>
-								{obj.nums} = {obj.res}
-							</li>
-						)
-					})}
-				</List>
+				<Menu/>
+				<Outlet/>
 			</div>
 		</AnimatedMain>
 	)
 })
 
-const List = memo(function List({children}) {
+const Menu = memo(function Menu() {
+	
+	const match1 = useMatch({
+		path: `/Calculator/Calc`,
+		end: false
+	})
+	
+	const match2 = useMatch({
+		path: `/Calculator/Converter`,
+		end: false
+	})
+	
 	return (
-		<div className={styles.list}>
-			<h1>History</h1>
-			<ul>
-				{children}
-			</ul>
-			<Background/>
-		</div>
+		<span className={styles.Menu}>
+			<Link to={"/Calculator/Calc"}
+			      className={match1 ? styles.Active : styles.UnActive}
+			>Калькулятор</Link>
+			<Link to={"/Calculator/Converter"}
+			      className={match2 ? styles.Active : styles.UnActive}
+			>Конвертер</Link>
+		</span>
 	)
 })

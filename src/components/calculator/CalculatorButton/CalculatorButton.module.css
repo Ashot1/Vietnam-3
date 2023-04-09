@@ -23,9 +23,11 @@
 .calcBtn:nth-child(8),
 .calcBtn:nth-child(12),
 .calcBtn:nth-child(16),
-.calcBtn:nth-child(17),
 .calcBtn:nth-child(19),
-.calcBtn:nth-child(20) {
+.calcBtn:nth-child(20),
+.calcBtn:nth-child(21),
+.calcBtn:nth-child(22),
+.calcBtn:nth-child(23) {
     background: rgba(255, 255, 255, 0.336);
     color: rgb(236, 229, 216);
     border-radius: 0;
@@ -42,15 +44,15 @@
 }
 
 .calcBtn:nth-child(17) {
-    border-radius: 15px;
+    grid-column: 1 / 3;
 }
 
-.calcBtn:nth-child(19) {
+.calcBtn:nth-child(20) {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-.calcBtn:nth-child(20) {
+.calcBtn:nth-child(23) {
     border-bottom-right-radius: 15px;
 }
 
@@ -61,9 +63,11 @@
 .calcBtn:nth-child(8):hover,
 .calcBtn:nth-child(12):hover,
 .calcBtn:nth-child(16):hover,
-.calcBtn:nth-child(17):hover,
 .calcBtn:nth-child(19):hover,
-.calcBtn:nth-child(20):hover {
+.calcBtn:nth-child(20):hover,
+.calcBtn:nth-child(21):hover,
+.calcBtn:nth-child(22):hover,
+.calcBtn:nth-child(23):hover {
     color: orange;
     box-shadow: none;
 }

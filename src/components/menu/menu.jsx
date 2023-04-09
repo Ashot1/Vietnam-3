@@ -16,7 +16,7 @@ export default function Menu({MenuChanges, setSetting}) {
 		MenuVariantAnimation = {
 			hidden: i => ({
 				x: i ? 0 : -150,
-				y: i ? -62 : 0,
+				y: i ? -49 : 0,
 				transition: {duration: .4}
 			}),
 			visible: i => ({

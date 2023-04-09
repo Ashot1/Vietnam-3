@@ -1,5 +1,4 @@
 import StartPage from "../pages/start/startPage";
-import CalculatorPage from "../pages/calculator/calculatorPage";
 import ConsolePage from "../pages/console/consolePage";
 import DownloadPage from "../pages/download/downloadPage";
 import SRMPage from "../pages/SRM/SRMPage";
@@ -16,7 +15,6 @@ import NotFoundedPage from "../pages/NotFounded/NotFoundedPage";
 
 export const routes = [
 	{path: '/', component: <StartPage/>},
-	{path: '/Calculator', component: <CalculatorPage/>},
 	{path: '/Console', component: <ConsolePage/>},
 	{path: '/Download', component: <DownloadPage/>},
 	{path: '/SocialRatingMiner', component: <SRMPage/>},

@@ -1,6 +1,6 @@
 import styles from "./Mark.module.css";
 import {useNavigate, useParams} from "react-router-dom";
-import {useContext, useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {DataContext} from "../../../provider/DataContext";
 import Loading from "../../Loading/Loading";
 import {deleteDoc, doc, updateDoc} from "firebase/firestore";
@@ -18,7 +18,6 @@ export default function Mark(props) {
 		CurrentMark = MarkArr.find(d => d.id === MarkId),
 		[EditMode, setEditMode] = useState(false),
 		[NewData, setNewData] = useState({}),
-		ScrollToTop = useRef(),
 		variantAnimation = {
 			visible: {
 				opacity: 1
@@ -27,10 +26,6 @@ export default function Mark(props) {
 				opacity: 0
 			}
 		}
-	
-	useEffect(() => {
-		window.scrollTo(0, ScrollToTop)
-	}, [])
 	
 	useEffect(() => {
 		if (!CurrentMark) return
@@ -109,7 +104,7 @@ export default function Mark(props) {
 			{CurrentMark ?
 				<section className={styles.info}>
 					<DefaultInfo EditMode={EditMode} copy={copy} variantAnimation={variantAnimation}
-					             ScrollToTop={ScrollToTop} CurrentMark={CurrentMark}/>
+					             CurrentMark={CurrentMark}/>
 					
 					<EditModeInfo EditMode={EditMode} variantAnimation={variantAnimation} SaveData={SaveData}
 					              CanceledEdit={CanceledEdit} NewData={NewData} ChangeTitle={ChangeTitle}
@@ -125,7 +120,7 @@ export default function Mark(props) {
 
 
 function DefaultInfo(props) {
-	const {EditMode, copy, variantAnimation, ScrollToTop, CurrentMark} = props,
+	const {EditMode, copy, variantAnimation, CurrentMark} = props,
 		BlocksVisibility = EditMode ? 'none' : 'block'
 	
 	return (
@@ -136,8 +131,7 @@ function DefaultInfo(props) {
 			           initial='hidden'
 			           animate='visible'
 			           variants={variantAnimation}
-			           whileHover={{opacity: .7}}
-			           ref={ScrollToTop}>{CurrentMark.title}</motion.h2>
+			           whileHover={{opacity: .7}}>{CurrentMark.title}</motion.h2>
 			<motion.p style={{display: BlocksVisibility}}
 			          onClick={copy}
 			          whileTap={{scale: 0.95}}
