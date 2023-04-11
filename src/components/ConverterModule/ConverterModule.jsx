@@ -11,7 +11,8 @@ export default function ConverterModule(props) {
 	
 	const [Valute, setValute] = useState([]),
 		MatchQuery = window.matchMedia("(max-width: 768px)").matches,
-		[FavoriteList, setFavoriteList] = useState(localStorage.getItem("FavoriteList").split(',') || ['USD', 'EUR']),
+		Condition = localStorage.getItem("FavoriteList").length > 0 ? localStorage.getItem("FavoriteList").split(',') : ['USD', 'EUR'],
+		[FavoriteList, setFavoriteList] = useState(Condition),
 		[Search, setSearch] = useState(''),
 		[InputSearch, setInputSearch] = useState('')
 	
