@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 .ConvertBody {
     width: 100%;
@@ -30,5 +31,54 @@
 @media (max-width: 300px) {
     .Info {
         grid-template-columns: repeat(auto-fit, 100%);
+    }
+}
+
+.Search {
+    width: 400px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    padding-left: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+.Search input {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: none;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.Search::before {
+    content: "";
+    display: flex;
+    width: 96%;
+    position: absolute;
+    height: 100%;
+    top: -1px;
+    left: 0;
+    transform: scaleX(0);
+    transition: .4s;
+    border-bottom: 4px solid green;
+    padding-left: 15px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+
+.Search:focus-within::before {
+    transition: .4s;
+    transform: scaleX(1);
+}
+
+@media (max-width: 500px) {
+    .Search {
+        width: 85%;
     }
 }

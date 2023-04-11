@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ee65d-5bf4-4a89-8a26-59a242d20540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Background/Background.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Background/Background.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calculator/CalculatorButton/CalculatorButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/CalculatorButton/CalculatorButton.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calculator/calculator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/calculator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SRM/SRM.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SRM/SRM.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/download/download.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/download/download.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/todo/todo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/todo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routing/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routing/routing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routing/routing.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +160,8 @@
       <workItem from="1681015436227" duration="280000" />
       <workItem from="1681015735109" duration="8713000" />
       <workItem from="1681040838418" duration="6736000" />
+      <workItem from="1681048728654" duration="1219000" />
+      <workItem from="1681187825973" duration="19541000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,12 @@
 import styles from "./ValueInfo.module.css";
 import {motion} from 'framer-motion'
 
-export default function ValueInfo({newCourse, oldCourse, title, fullTitle, percent}) {
+export default function ValueInfo({newCourse, oldCourse, title, fullTitle, percent, click}) {
 	
 	return (
-		<motion.li className={styles.ValueInfo}>
+		<motion.li className={styles.ValueInfo} onClick={click}
+		           initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: .5}} exit={{opacity: 0}}
+		           whileTap={{opacity: 0.1}}>
 			<section className={styles.ValuteInfo}>
 				<div>
 					<h3>{title}</h3>
@@ -21,7 +23,7 @@ export default function ValueInfo({newCourse, oldCourse, title, fullTitle, perce
 			</section>
 			<section className={styles.Course}>
 				<p className={styles.NewData}>{newCourse.toFixed(4)} ₽</p>
-				<p className={styles.pastData}><b>⮜</b>
+				<p className={styles.pastData}><b><img src="/images/Converter/left-arrow.png" alt=""/></b>
 					{oldCourse.toFixed(4)} ₽
 				</p>
 			</section>

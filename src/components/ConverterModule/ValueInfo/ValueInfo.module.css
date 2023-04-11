@@ -4,14 +4,20 @@
     background-color: #fff;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.ValueInfo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.42);
+    transition: .4s;
 }
 
 .Course {
     display: flex;
     margin-top: 15px;
-    -moz-user-select: text;
-    -webkit-user-select: text;
 }
+
 
 .NewData {
     margin-top: 1rem;
@@ -25,8 +31,22 @@
 
 .pastData b {
     margin-left: 20px;
-    margin-right: 15px;
+    margin-right: 10px;
     user-select: none;
+}
+
+.pastData > b > img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -3px;
+    opacity: .5;
+}
+
+@media (max-width: 500px) {
+    .pastData > b > img {
+        margin-bottom: -5px;
+
+    }
 }
 
 .pastData {
@@ -38,6 +58,18 @@
     margin-bottom: 1rem;
     color: rgba(0, 0, 0, 0.39);
 }
+
+@media (max-width: 500px) {
+    .NewData {
+        font-size: 20px;
+    }
+
+    .pastData {
+        font-size: 15px;
+    }
+
+}
+
 
 .percent {
     font-weight: 600;
@@ -68,3 +100,4 @@
     font-size: 12px;
     position: absolute;
 }
+
