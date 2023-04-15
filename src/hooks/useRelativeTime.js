@@ -18,6 +18,6 @@ export default function UseRelativeTime(date, lang) {
 	
 	const RelativeDate = -2 < (DifferenceTimeS / divisor) ? Math.ceil(DifferenceTimeS / divisor) : Math.round(DifferenceTimeS / divisor)
 	
-	return rtf.format(RelativeDate, WordsTime[index])
+	if (!isNaN(RelativeDate)) return rtf.format(RelativeDate, WordsTime[index])
 	
 }
