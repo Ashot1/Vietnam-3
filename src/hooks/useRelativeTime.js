@@ -1,8 +1,12 @@
+import UseFormateDate from "./useFormateDate";
+
 export default function UseRelativeTime(date, lang) {
 	
-	const ConvertFormatDate = new Date(date).toLocaleString('ru')
+	const FormatedDate = UseFormateDate(date)
 	
-	const timeMS = typeof date === 'number' ? date : new Date(ConvertFormatDate).getTime();
+	const ConvertFormatDate = new Date(FormatedDate)
+	
+	const timeMS = typeof date === 'number' ? date : ConvertFormatDate.getTime();
 	
 	const DifferenceTimeS = Math.round((timeMS - Date.now()) / 1000)
 	

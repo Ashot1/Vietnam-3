@@ -3,6 +3,7 @@ import {collection, query, where} from "firebase/firestore";
 import {db} from "../firebase";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import {AuthContext} from "./AuthContext";
+import UseFormateDate from "../hooks/useFormateDate";
 
 export const DataContext = createContext()
 
@@ -38,7 +39,11 @@ export default memo(function DataProvider({children}) {
 		}
 		
 		setMarkArr(MarkArray.sort((a, b) => {
-			let dateA = new Date(a.CreateAt), dateB = new Date(b.CreateAt)
+			const firstDate = UseFormateDate(a.CreateAt),
+				secondDate = UseFormateDate(b.CreateAt),
+				dateA = new Date(firstDate),
+				dateB = new Date(secondDate)
+			
 			if (SortParams === 'newToOld') return dateB - dateA
 			if (SortParams === 'oldToNew') return dateA - dateB
 		}))
