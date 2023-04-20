@@ -16,12 +16,14 @@ export default function Menu({MenuChanges, setSetting}) {
 		MenuVariantAnimation = {
 			hidden: i => ({
 				x: i ? 0 : -150,
-				y: i ? -49 : 0,
+				y: i ? -40 : 0,
+				opacity: 0.3,
 				transition: {duration: .4}
 			}),
 			visible: i => ({
 				x: 0,
 				y: 0,
+				opacity: 1,
 				transition: {duration: .4}
 			})
 		}

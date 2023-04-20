@@ -87,7 +87,16 @@ export default function Mark(props) {
 	}
 	
 	const SaveData = async () => {
-		await updateDoc(doc(db, "Marks", MarkId), {title: NewData.title, Content: NewData.content});
+		const options = ({
+				day: 'numeric',
+				month: 'numeric',
+				year: 'numeric',
+				hour: 'numeric',
+				minute: 'numeric',
+				second: 'numeric'
+			}),
+			date = new Date().toLocaleString('ru', options);
+		await updateDoc(doc(db, "Marks", MarkId), {title: NewData.title, Content: NewData.content, CreateAt: date});
 		setEditMode(false)
 		toast.success('Изменения сохранены!', {
 			style: {

@@ -35,7 +35,7 @@ export default function ConverterModule(props) {
 	
 	useEffect(() => {
 		const timeout = setTimeout(() => {
-			setSearch(InputSearch)
+			setSearch(InputSearch.toLowerCase())
 		}, 500)
 		
 		return () => clearInterval(timeout)
@@ -50,10 +50,10 @@ export default function ConverterModule(props) {
 				<FavoriteConvertList List={FavoriteList} Valute={Valute} click={DeleteFavorite} key="FavoriteList"/>
 				<div className={styles.Search}>
 					<input type="text" onChange={(e) => setInputSearch(e.target.value)}
-					       placeholder="Search"/>
+					       placeholder="Поиск"/>
 				</div>
 				<ul className={styles.Info} key="ValuteList">
-					{Object.values(Valute).filter((item) => item.CharCode.concat(item.Name).includes(Search)).map(item => {
+					{Object.values(Valute).filter((item) => item.CharCode.concat(item.Name).toLowerCase().includes(Search)).map(item => {
 						let New = (item.Value / item.Nominal)
 						let Old = (item.Previous / item.Nominal)
 						

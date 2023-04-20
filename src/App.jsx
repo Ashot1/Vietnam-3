@@ -20,18 +20,6 @@ export default function App() {
 		setCreateMarkActive(!CreateMarkActive)
 	}
 	
-	function MenuActivation(value) {
-		return setMenuOpen((MenuOpen) => !MenuOpen);
-	}
-	
-	const setSetting = () => {
-		setSettingsState(true)
-	}
-	
-	const CloseSetting = () => {
-		setSettingsState(false)
-	}
-	
 	useEffect(() => {
 		if (localStorage.getItem('Mobile Menu') === null) {
 			localStorage.setItem('Mobile Menu', 'upper')
@@ -39,15 +27,14 @@ export default function App() {
 		}
 	}, [])
 	
-	
 	return (
 		<div className={styles.app}>
 			<Toaster
 				position="bottom-center"
 				reverseOrder={true}/>
-			<Header BurgerChange={MenuActivation} SettingChange={setSetting}/>
-			<Menu MenuChanges={MenuOpen} setSetting={setSetting}/>
-			<SettingModal SettingsState={SettingsState} CloseSetting={CloseSetting}/>
+			<Header BurgerChange={() => setMenuOpen(!MenuOpen)} SettingChange={() => setSettingsState(true)}/>
+			<Menu MenuChanges={MenuOpen} setSetting={() => setSettingsState(true)}/>
+			<SettingModal SettingsState={SettingsState} CloseSetting={() => setSettingsState(false)}/>
 			<CreateMark CreateMarkActive={CreateMarkActive} ChangeCreateModal={ChangeCreateModal}/>
 			{/*<Suspense fallback={<Preloader/>}>*/}
 			<Routing ChangeCreateModal={ChangeCreateModal}/>

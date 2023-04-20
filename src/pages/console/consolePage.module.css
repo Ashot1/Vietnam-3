@@ -1,0 +1,23 @@
+.main {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.content {
+    width: clamp(950px, 70%, 1100px);
+    margin-top: 100px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        width: 90%;
+    }
+
+    .main {
+        padding-bottom: 50px;
+    }
+}

@@ -76,3 +76,10 @@
         -o-transition: 0.4s;
     }
 }
+
+@media (max-width: 320px) {
+    .button_img {
+        width: 28px;
+        height: 28px;
+    }
+}

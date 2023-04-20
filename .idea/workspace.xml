@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7ee65d-5bf4-4a89-8a26-59a242d20540" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/console/consolePage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ConverterModule.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/FavoriteConvertList/FavoriteConvertList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/FavoriteConvertList/FavoriteConvertList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/EditModeInfo/EditModeInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/EditModeInfo/EditModeInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Form/LoginInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Form/LoginInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Selector/Selector.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Selector/Selector.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/WaveButton/WaveButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/WaveButton/WaveButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/ButtonMenu/MenuLinkButtons.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/ButtonMenu/MenuLinkButtons.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/console/console.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/console/consolePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/console/consolePage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +173,17 @@
       <workItem from="1681015735109" duration="8713000" />
       <workItem from="1681040838418" duration="6736000" />
       <workItem from="1681048728654" duration="1219000" />
-      <workItem from="1681187825973" duration="20661000" />
+      <workItem from="1681187825973" duration="20750000" />
+      <workItem from="1681231764352" duration="1466000" />
+      <workItem from="1681282954552" duration="3639000" />
+      <workItem from="1681348896095" duration="4144000" />
+      <workItem from="1681564114857" duration="984000" />
+      <workItem from="1681708892992" duration="2492000" />
+      <workItem from="1681711582153" duration="12244000" />
+      <workItem from="1681732335365" duration="2971000" />
+      <workItem from="1681882591618" duration="6147000" />
+      <workItem from="1681919328715" duration="599000" />
+      <workItem from="1682000163288" duration="5114000" />
     </task>
     <servers />
   </component>

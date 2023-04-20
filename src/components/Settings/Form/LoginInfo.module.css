@@ -191,6 +191,7 @@
 @media (max-width: 500px) {
     .info {
         flex-direction: column;
+        font-size: 13px;
     }
 
     .card {
@@ -198,17 +199,22 @@
     }
 
     .info section {
-        margin: 15px;
+        margin: 10px 0 15px 0;
+    }
+
+    .photoImage {
+        width: 70px;
+        height: 70px;
     }
 }
 
 @media (max-width: 300px) {
     .card {
-        width: 250px;
+        width: 90%;
     }
 
     .info section {
-        margin: 5px;
+        margin: 10px 0 10px 0;
     }
 
 }

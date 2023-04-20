@@ -23,14 +23,26 @@
     place-items: center;
 }
 
+
 .GroupName {
     margin-bottom: 25px;
     font-family: 'Roboto Slab', serif;
 }
 
 @media (max-width: 500px) {
+    .FavoriteWrapper {
+        width: 100%;
+    }
+
     .FavoriteList {
         grid-template-columns: repeat(auto-fit, 90%);
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .FavoriteList {
+        grid-template-columns: repeat(auto-fit, 95%);
         width: 100%;
     }
 }
