@@ -20,7 +20,7 @@ export default memo(function MarksList({ChangeCreateModal}) {
 	}, [MarkArr])
 	
 	const HoverEffect = (e) => {
-		const x = e.clientX - e.target.offsetLeft,
+		const x = e.clientX - e.target.getBoundingClientRect().left,
 			y = e.clientY - e.target.getBoundingClientRect().top
 		
 		e.target.style.setProperty("--mouse-x", `${x}px`)

@@ -22,6 +22,12 @@
     }
 }
 
+@media (max-width: 300px) {
+    .button2 {
+        font-size: 13px;
+    }
+}
+
 .button2:active {
     color: #666;
     box-shadow: inset 4px 4px 12px #c5c5c5,

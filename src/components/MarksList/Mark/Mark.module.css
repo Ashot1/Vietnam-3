@@ -13,10 +13,15 @@
 @media (max-width: 1100px) {
     .Mark {
         padding: 20px;
-        width: clamp(200px, 80vw, 500px);
+        width: clamp(200px, 85vw, 700px);
     }
 }
 
+@media (max-width: 300px) {
+    .Mark {
+        width: clamp(200px, 80vw, 700px);
+    }
+}
 
 .info {
     display: flex;
@@ -57,13 +62,7 @@
 
 @media (max-width: 500px) {
     .info p {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 300px) {
-    .info p {
-        max-width: 85%;
+        max-width: 95%;
     }
 }
 

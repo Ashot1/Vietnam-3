@@ -23,15 +23,15 @@ export default function Console(props) {
 		}
 	}
 	
-	const ChangeServerData = async (data) => {
+	const ChangeServerData = async (data, value) => {
 		const MarkQuery = query(collection(db, "SRM"), where("id", "==", User.uid))
 		const Document = await getDocs(MarkQuery)
 		let DocID = ''
 		Document.forEach((doc) => {
 			DocID = doc.id
 		});
-		if (data === 'Credits') await updateDoc(doc(db, "SRM", DocID), {Credits: 0})
-		if (data === 'Payday') await updateDoc(doc(db, "SRM", DocID), {Payday: 0})
+		if (data === 'Credits') await updateDoc(doc(db, "SRM", DocID), {Credits: value})
+		if (data === 'Payday') await updateDoc(doc(db, "SRM", DocID), {Payday: value})
 	}
 	
 	const MessageHandler = useCallback(async (mes) => {
@@ -45,6 +45,8 @@ export default function Console(props) {
 			CreateSystemLog('clearSRMserverCREDITS')
 			CreateSystemLog('clearSRMpayday')
 			CreateSystemLog('clearSRMcredits')
+			CreateSystemLog('changeSRMcredits')
+			CreateSystemLog('changeSRMpayday')
 			return
 		}
 		if (mes.toLowerCase() === 'clearconsole') {
@@ -63,19 +65,19 @@ export default function Console(props) {
 		}
 		if (mes.toLowerCase() === 'clearsrmserverpayday') {
 			if (!User) return CreateSystemLog('You must log in!')
-			TrySomething(() => ChangeServerData('Payday'))
+			TrySomething(() => ChangeServerData('Payday', 0))
 			return
 		}
 		if (mes.toLowerCase() === 'clearsrmservercredits') {
 			if (!User) return CreateSystemLog('You must log in!')
-			TrySomething(() => ChangeServerData('Credits'))
+			TrySomething(() => ChangeServerData('Credits', 0))
 			return
 		}
 		if (mes.toLowerCase() === 'clearsrmcredits') {
 			if (!User) return CreateSystemLog('You must log in!')
 			TrySomething(() => {
 				localStorage.setItem('credits', '0')
-				ChangeServerData('Credits')
+				ChangeServerData('Credits', 0)
 			})
 			return
 		}
@@ -83,10 +85,29 @@ export default function Console(props) {
 			if (!User) return CreateSystemLog('You must log in!')
 			TrySomething(() => {
 				localStorage.setItem('Payday', '0')
-				ChangeServerData('Payday')
+				ChangeServerData('Payday', 0)
 			})
 			return
 		}
+		if (mes.split(' ')[0].toLowerCase() === 'changesrmcredits' && mes.split(' ').length === 2) {
+			if (!User) return CreateSystemLog('You must log in!')
+			if (User.uid !== 'pTV7bHCQOeWFkcFFd1dalgO4ONn2') return CreateSystemLog('You must be admin!')
+			TrySomething(() => {
+				localStorage.setItem('credits', mes.split(' ')[1])
+				ChangeServerData('Credits', parseInt(mes.split(' ')[1]))
+			})
+			return
+		}
+		if (mes.split(' ')[0].toLowerCase() === 'changesrmpayday' && mes.split(' ').length === 2) {
+			if (!User) return CreateSystemLog('You must log in!')
+			if (User.uid !== 'pTV7bHCQOeWFkcFFd1dalgO4ONn2') return CreateSystemLog('You must be admin!')
+			TrySomething(() => {
+				localStorage.setItem('Payday', mes.split(' ')[1])
+				ChangeServerData('Payday', parseInt(mes.split(' ')[1]))
+			})
+			return
+		}
+		
 		CreateSystemLog('Unknown command')
 	}, [User])
 	
