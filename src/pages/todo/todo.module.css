@@ -18,14 +18,17 @@
 }
 
 .content {
-    max-width: 63%;
+    width: 63%;
     min-width: 800px;
     margin-top: 100px;
+    display: grid;
+    place-items: center;
+    position: relative;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .content {
-        max-width: 95%;
+        width: 95%;
         min-width: 95%;
     }
 

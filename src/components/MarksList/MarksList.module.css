@@ -83,7 +83,7 @@
 
 @media (max-width: 500px) {
     .Wrapper {
-        width: 95%;
+        width: 90vw;
     }
 
     .TodoUl {
@@ -98,13 +98,6 @@
 
 }
 
-@media (max-width: 300px) {
-    .Wrapper {
-        width: 95%;
-    }
-
-}
-
 .Wrapper {
     background: var(--backgroundC);
     padding: 30px 10px 60px 10px;
@@ -113,6 +106,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .options {

@@ -1,7 +1,7 @@
 import styles from "./Mark.module.css";
 import {useNavigate, useParams} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
-import {DataContext} from "../../../provider/DataContext";
+import {MarkDataContext} from "../../../provider/MarkDataContext";
 import Loading from "../../Loading/Loading";
 import {deleteDoc, doc, updateDoc} from "firebase/firestore";
 import {db} from "../../../firebase";
@@ -14,7 +14,7 @@ import EditModeInfo from "./EditModeInfo/EditModeInfo";
 export default function Mark(props) {
 	const {MarkId} = useParams(),
 		navigate = useNavigate(),
-		[MarkArr, loading, error] = useContext(DataContext),
+		[MarkArr, loading, error] = useContext(MarkDataContext),
 		CurrentMark = MarkArr.find(d => d.id === MarkId),
 		[EditMode, setEditMode] = useState(false),
 		[NewData, setNewData] = useState({}),
@@ -74,11 +74,6 @@ export default function Mark(props) {
 		setEditMode(false)
 		setNewData({title: CurrentMark.title, content: CurrentMark.Content})
 	}
-	
-	const ChangeTitle = (e) => {
-		setNewData({...NewData, title: e.target.value})
-	}
-	
 	const ChangeContent = (e) => {
 		setNewData({
 			...NewData,
@@ -116,7 +111,8 @@ export default function Mark(props) {
 					             CurrentMark={CurrentMark}/>
 					
 					<EditModeInfo EditMode={EditMode} variantAnimation={variantAnimation} SaveData={SaveData}
-					              CanceledEdit={CanceledEdit} NewData={NewData} ChangeTitle={ChangeTitle}
+					              CanceledEdit={CanceledEdit} NewData={NewData}
+					              ChangeTitle={(e) => setNewData({...NewData, title: e.target.value})}
 					              ChangeContent={ChangeContent}/>
 					
 					<motion.span initial='hidden'

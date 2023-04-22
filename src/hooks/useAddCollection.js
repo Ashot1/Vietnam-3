@@ -19,6 +19,14 @@ export default async function UseAddCollection([content, title, Col, user]) {
 			CreateAt: date
 		});
 	}
+	if (Col === 'Todos') {
+		const docRef = await addDoc(collection(db, Col), {
+			Content: content,
+			id: user.uid,
+			isChecked: false,
+			CreateAt: date
+		});
+	}
 	if (Col === 'SRM') {
 		const docRef = await addDoc(collection(db, Col), {
 			Payday: title,

@@ -1,6 +1,6 @@
 import styles from "./MarksList.module.css";
 import {memo, useContext, useEffect, useState} from "react";
-import {DataContext} from "../../provider/DataContext";
+import {MarkDataContext} from "../../provider/MarkDataContext";
 import {Link, useNavigate} from "react-router-dom";
 import LoadingData from "../../hoc/LoadingData";
 import {motion, useAnimate} from "framer-motion"
@@ -10,7 +10,7 @@ import UseRelativeTime from "../../hooks/useRelativeTime";
 
 export default memo(function MarksList({ChangeCreateModal}) {
 	const [Marks, setMarks] = useState([]),
-		[MarkArr, loading, error, setSortParams, SortArrayValues] = useContext(DataContext),
+		[MarkArr, loading, error, setSortParams, SortArrayValues] = useContext(MarkDataContext),
 		MatchQuery = window.matchMedia("(max-width: 768px)").matches
 	
 	useEffect(() => {

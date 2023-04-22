@@ -79,7 +79,6 @@ export default function Console(props) {
 			})
 			return
 		}
-		//239600
 		if (mes.toLowerCase() === 'clearsrmpayday') {
 			if (!User) return CreateSystemLog('You must log in!')
 			TrySomething(() => {

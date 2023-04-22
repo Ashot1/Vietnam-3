@@ -5,9 +5,9 @@ import {useCollectionData} from "react-firebase-hooks/firestore";
 import {AuthContext} from "./AuthContext";
 import UseFormateDate from "../hooks/useFormateDate";
 
-export const DataContext = createContext()
+export const MarkDataContext = createContext()
 
-export default memo(function DataProvider({children}) {
+export default memo(function MarkDataProvider({children}) {
 	
 	const User = useContext(AuthContext),
 		MarkQuery = query(collection(db, "Marks"), where("id", "==", User.uid)),
@@ -51,8 +51,8 @@ export default memo(function DataProvider({children}) {
 	
 	
 	return (
-		<DataContext.Provider value={[MarkArr, loading, error, setSortParams, SortArrayValues]}>
+		<MarkDataContext.Provider value={[MarkArr, loading, error, setSortParams, SortArrayValues]}>
 			{children}
-		</DataContext.Provider>
+		</MarkDataContext.Provider>
 	)
 })

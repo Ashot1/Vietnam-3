@@ -1,6 +1,7 @@
 import styles from "./todo.module.css";
 import {Link, Navigate, Outlet, useLocation, useMatch} from "react-router-dom";
-import DataProvider from "../../provider/DataContext"
+import MarkDataProvider from "../../provider/MarkDataContext"
+import TodoDataProvider from "../../provider/TodoDataContext"
 import PrivatePage from "../../hoc/PrivatePage";
 import AnimatedMain from "../../components/AnimatedMain/AnimatedMain";
 
@@ -15,9 +16,11 @@ export default function TodoPage({ChangeCreateModal}) {
 			<div className={styles.content}>
 				<Menu/>
 				<PrivatePage>
-					<DataProvider>
-						<Outlet/>
-					</DataProvider>
+					<MarkDataProvider>
+						<TodoDataProvider>
+							<Outlet/>
+						</TodoDataProvider>
+					</MarkDataProvider>
 				</PrivatePage>
 			</div>
 		</AnimatedMain>
