@@ -1,0 +1,98 @@
+.DeleteButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.DeleteButton img {
+    transition: .4s;
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 500px) {
+    .DeleteButton img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.DeleteButton:hover img {
+    transition: .4s;
+    opacity: .4;
+}
+
+.info p {
+    word-wrap: break-word;
+    font-weight: 600;
+    color: var(--HeaderLogo);
+}
+
+@media (max-width: 500px) {
+    .info p {
+        font-size: 13px;
+    }
+}
+
+.checkbox {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--TodoCheckBoxColor);
+    border-radius: 10px;
+    margin-right: 25px;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 500px) {
+    .checkbox {
+        width: 7px;
+        height: 7px;
+    }
+}
+
+.checkbox span {
+    position: absolute;
+    border-radius: 5px;
+    width: 70%;
+    height: 70%;
+    background: var(--TodoCheckBoxColor);
+}
+
+.info b {
+    background: rgba(196, 137, 57, 0.4);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: rgba(196, 137, 57, 1);
+    border: 2px solid rgba(196, 137, 57, 0.8);
+}
+
+@media (max-width: 500px) {
+    .info b {
+        font-size: 10px;
+    }
+}
+
+.TodoLi {
+    background: var(--MarkBackgroundColor);
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    width: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .TodoLi {
+        width: 95%;
+    }
+}

@@ -14,18 +14,24 @@ import {AnimatePresence} from "framer-motion"
 export default function App() {
 	const [MenuOpen, setMenuOpen] = useState(false),
 		[SettingsState, setSettingsState] = useState(false),
-		[CreateMarkActive, setCreateMarkActive] = useState(false)
+		[CreateMarkActive, setCreateMarkActive] = useState(false),
+		Theme = localStorage.getItem('darkmode')
 	
 	const ChangeCreateModal = () => {
 		setCreateMarkActive(!CreateMarkActive)
 	}
 	
 	useEffect(() => {
-		if (localStorage.getItem('Mobile Menu') === null) {
+		if (localStorage.getItem('Mobile Menu') === null || localStorage.getItem('darkmode') === null) {
 			localStorage.setItem('Mobile Menu', 'upper')
+			localStorage.setItem('darkmode', 'off')
 			window.location.reload()
 		}
 	}, [])
+	
+	useEffect(() => {
+		document.documentElement.dataset.theme = Theme
+	}, [Theme])
 	
 	return (
 		<div className={styles.app}>

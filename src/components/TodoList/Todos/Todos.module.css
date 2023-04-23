@@ -1,0 +1,15 @@
+
+.TodoUl {
+    list-style-type: none;
+    padding: 0 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 300px) {
+    .TodoUl {
+        padding: 0 5px 10px 5px;
+    }
+}

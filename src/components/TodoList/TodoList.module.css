@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 .wrapper {
-    background: var(--backgroundC);
+    background: var(--Secondary);
     border-radius: 15px;
     margin-top: 50px;
     min-height: 400px;
@@ -23,94 +23,6 @@
     margin-top: 20px;
 }
 
-.TodoUl {
-    list-style-type: none;
-    padding: 0 20px 10px 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.TodoLi {
-    background: rgb(242, 242, 242);
-    border-radius: 10px;
-    padding: 15px;
-    cursor: pointer;
-    width: 60%;
-    border: 1px solid rgba(0, 0, 0, 0.17);
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    align-items: center;
-}
-
-@media (max-width: 500px) {
-    .TodoLi {
-        width: 95%;
-    }
-}
-
-@media (max-width: 300px) {
-    .TodoUl {
-        padding: 0 5px 10px 5px;
-    }
-}
-
-.info p {
-    word-wrap: break-word;
-    font-weight: 600;
-}
-
-@media (max-width: 500px) {
-    .info p {
-        font-size: 14px;
-    }
-}
-
-.checkbox {
-    flex: 0 0 auto;
-    width: 16px;
-    height: 16px;
-    border: 3px solid rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    margin-right: 25px;
-    position: relative;
-    overflow: hidden;
-    padding: 5px;
-    display: grid;
-    place-items: center;
-}
-
-@media (max-width: 500px) {
-    .checkbox {
-        width: 7px;
-        height: 7px;
-    }
-}
-
-.checkbox span {
-    position: absolute;
-    border-radius: 5px;
-    width: 70%;
-    height: 70%;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.info b {
-    background: rgba(196, 137, 57, 0.5);
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 12px;
-    color: rgba(196, 137, 57, 0.9);
-    border: 2px solid rgba(196, 137, 57, 0.8);
-}
-
-@media (max-width: 500px) {
-    .info b {
-        font-size: 10px;
-    }
-}
-
 .addPanel input {
     border: none;
     outline: none;
@@ -119,6 +31,7 @@
     width: 50%;
     border-radius: 5px 0 0 5px;
     font-size: 17px;
+    color: var(--HeaderLogo);
 }
 
 .addPanel {
@@ -158,36 +71,11 @@
 
     .addPanel button {
         font-size: 10px;
-        height: 35px;
+        height: 37px;
     }
 }
 
 .addPanel button:hover {
     background: rgba(35, 126, 24, 0.76);
     transition: .3s;
-}
-
-.DeleteButton {
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.DeleteButton img {
-    transition: .4s;
-    width: 25px;
-    height: 25px;
-}
-
-@media (max-width: 500px) {
-    .DeleteButton img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.DeleteButton:hover img {
-    transition: .4s;
-    opacity: .4;
 }

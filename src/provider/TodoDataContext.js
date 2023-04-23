@@ -1,5 +1,5 @@
 import {createContext, memo, useContext, useEffect, useState} from "react";
-import {collection, query, where} from "firebase/firestore";
+import {addDoc, collection, query, where} from "firebase/firestore";
 import {db} from "../firebase";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import {AuthContext} from "./AuthContext";
@@ -15,28 +15,21 @@ export default memo(function TodoDataProvider({children}) {
 	
 	useEffect(() => {
 		if (!values) return
-		let TodoArray = [],
-			ids = []
-		
-		snapshot.forEach((d) => {
-			ids.push(d.id)
-		})
-		
-		for (let i = 0; i < values.length; i++) {
-			TodoArray.push({
-				Content: values[i].Content,
-				CreateAt: values[i].CreateAt,
-				isChecked: values[i].isChecked,
-				id: ids[i]
-			})
+		if (values.length <= 0) {
+			const AddDoc = async () => {
+				const docRef = await addDoc(collection(db, "Todos"), {
+					Todo: [],
+					id: User.uid
+				})
+			}
+			AddDoc()
 		}
-		
-		setTodoArr(TodoArray)
+		setTodoArr(values[0].Todo)
 	}, [values])
 	
 	
 	return (
-		<TodoDataContext.Provider value={[TodoArr, loading, error]}>
+		<TodoDataContext.Provider value={[TodoArr, loading, error, snapshot]}>
 			{children}
 		</TodoDataContext.Provider>
 	)

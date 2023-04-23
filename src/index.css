@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(245, 244, 244);
+    background: var(--BodyBackground);
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: hidden;
@@ -34,4 +34,57 @@ body::-webkit-scrollbar-thumb {
 
 * {
     -webkit-tap-highlight-color: transparent;
+}
+
+:root[data-theme="off"] {
+    --Primary: white;
+    --Secondary: white;
+    --HeaderLogo: black;
+    --BodyBackground: rgb(245, 244, 244);
+    --HeaderBoxShadow: rgba(212, 212, 212, 0.815);
+    --BurgerMenuBackground: black;
+    --MenuButtonInvert: invert(0);
+    --BonusListLiBoxShadow: rgba(0, 0, 0, 0.19);
+    --DownloadHoverTextColor: rgba(0, 0, 0, 0.8);
+    --DownloadInfoAboutTextColor: rgba(70, 70, 70, 0.795);
+    --MarkBackgroundColor: rgb(242, 242, 242);
+    --MarkTextColor: rgba(0, 0, 0, .7);
+    --MarkHoverColor: rgba(0, 0, 0, 0.15);
+    --TodoCheckBoxColor: rgba(0, 0, 0, 0.7);
+    --SliderUnactiveButtonColor: rgb(179, 179, 179);
+    --WaveButtonBackgroundColor: #e8e8e8;
+    --WaveButtonBoxShadow: #c5c5c5;
+    --ModalWindowBackgroundColor: #efefef;
+
+    --ParamsBoxShadow1: rgba(255, 255, 255, .7);
+    --ParamsBoxShadow2: rgba(255, 255, 255, .5);
+    --ParamsBoxShadow3: rgba(255, 255, 255, .075);
+    --ParamsBoxShadow4: rgba(0, 0, 0, .15);
+}
+
+:root[data-theme="on"] {
+    --Primary: rgb(34, 38, 39);
+    --Secondary: rgb(45, 45, 45);
+    --HeaderLogo: rgb(224, 220, 220);
+    --BodyBackground: rgb(24, 25, 27);
+    --HeaderBoxShadow: rgba(0, 0, 0, 0.281);
+    --BurgerMenuBackground: rgba(184, 180, 180, 1);
+    --MenuButtonInvert: invert(70%);
+    --BonusListLiBoxShadow: rgba(255, 255, 255, 0.19);
+    --CalcBrightnessFilter: brightness(0.8);
+    --DownloadHoverTextColor: rgba(220, 220, 220, 0.8);
+    --DownloadInfoAboutTextColor: rgba(200, 200, 200, 0.795);
+    --MarkBackgroundColor: rgba(24, 24, 24, 0.7);
+    --MarkTextColor: rgba(255, 255, 255, .5);
+    --MarkHoverColor: rgba(255, 255, 255, 0.05);
+    --TodoCheckBoxColor: rgba(255, 255, 255, 0.7);
+    --SliderUnactiveButtonColor: rgba(179, 179, 179, 0.4);
+    --WaveButtonBackgroundColor: #212121;
+    --WaveButtonBoxShadow: #131313;
+    --ModalWindowBackgroundColor: #424242;
+
+    --ParamsBoxShadow1: rgba(0, 0, 0, .5);
+    --ParamsBoxShadow2: rgba(60, 60, 60, .1);
+    --ParamsBoxShadow3: rgba(160, 160, 160, .075);
+    --ParamsBoxShadow4: rgba(150, 150, 150, .15);
 }
