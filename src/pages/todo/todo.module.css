@@ -83,7 +83,6 @@
 .UnActive {
     border: 1px solid black;
     color: var(--HeaderLogo);
-    background: var(--Primary);
 }
 
 .Active {

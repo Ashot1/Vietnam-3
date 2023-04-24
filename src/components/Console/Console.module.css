@@ -4,12 +4,13 @@
 .console {
     width: 100%;
     height: clamp(450px, 65vh, 700px);
-    background: white;
+    background: var(--Secondary);
     border-radius: 10px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.22);
     overflow-y: scroll;
     overflow-x: hidden;
     position: relative;
+    color: var(--HeaderLogo);
 }
 
 .console::-webkit-scrollbar {
@@ -41,6 +42,7 @@
     outline: none;
     background: transparent;
     font-size: 20px;
+    color: var(--HeaderLogo);
 }
 
 .Commands {

@@ -5,14 +5,13 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    color: #090909;
+    color: var(--HeaderLogo);
     padding: 0.7em 1.7em;
     font-size: 17px;
     border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    box-shadow: 6px 6px 12px #c5c5c5,
-    -6px -6px 12px #ffffff;
+    background: var(--WaveButtonBackgroundColor);
+    border: 1px solid var(--WaveButtonBackgroundColor);
+    box-shadow: 6px 6px 12px var(--WaveButtonBoxShadow);
     cursor: pointer;
 }
 

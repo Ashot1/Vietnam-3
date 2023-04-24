@@ -9,6 +9,7 @@
 
 .backButton {
     margin-left: 15px;
+    filter: var(--MenuButtonInvert);
 }
 
 .backButton img {

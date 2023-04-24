@@ -3,12 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="fb7ee65d-5bf4-4a89-8a26-59a242d20540" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Console/Console.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Console/Console.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CalculatorModule/CalculatorModule.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CalculatorModule/CalculatorModule.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Console/Console.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Console/Console.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/FavoriteConvertList/FavoriteConvertList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/FavoriteConvertList/FavoriteConvertList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/EditModeInfo/EditModeInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/EditModeInfo/EditModeInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/Mark.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/MarksList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/MarksList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoList/TodoList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList/TodoList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NeedAccountMessage/NeedAccountMessage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NeedAccountMessage/NeedAccountMessage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Selector/Selector.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Selector/Selector.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/WaveButton/WaveButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/WaveButton/WaveButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/ButtonMenu/MenuLinkButtons.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/ButtonMenu/MenuLinkButtons.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider/slider.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/slider.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SRM/SRMPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SRM/SRMPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/download/download.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/download/download.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/todo/todo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/todo.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +77,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\tltxd\\Desktop\\Vietnam-3\\public&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MTConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Programs\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -65,11 +89,11 @@
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\header\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\Settings" />
+      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\TodoList" />
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\ConverterModule" />
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\SRMMain" />
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\public\images\SRM" />
-      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\calculator" />
-      <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\Settings" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,7 +215,12 @@
       <workItem from="1682000163288" duration="6264000" />
       <workItem from="1682090383933" duration="252000" />
       <workItem from="1682093276115" duration="23012000" />
-      <workItem from="1682175508261" duration="2183000" />
+      <workItem from="1682175508261" duration="2794000" />
+      <workItem from="1682231128872" duration="6122000" />
+      <workItem from="1682243879705" duration="69000" />
+      <workItem from="1682243964813" duration="18588000" />
+      <workItem from="1682336885958" duration="7566000" />
+      <workItem from="1682350969637" duration="8555000" />
     </task>
     <servers />
   </component>

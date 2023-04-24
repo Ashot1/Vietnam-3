@@ -11,7 +11,8 @@
 .message {
     font-family: 'Anton', sans-serif;
     padding: 25px;
-    background: white;
+    background: var(--Primary);
+    color: var(--HeaderLogo);
     border-radius: 15px;
     font-weight: 100;
 }

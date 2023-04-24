@@ -8,7 +8,7 @@
 }
 
 .info div {
-    background: white;
+    background: var(--Secondary);
     border-radius: 20px;
     padding: 10px 25px 10px 25px;
     text-transform: uppercase;
@@ -39,13 +39,17 @@
     -webkit-user-select: text;
 }
 
+.info div p:nth-child(1) {
+    color: var(--HeaderLogo);
+}
+
 .info div p:nth-child(2) {
     color: green;
 }
 
 .info button {
     margin-top: 25px;
-    background: white;
+    background: var(--Secondary);
     border-radius: 5px;
     font-size: 14px;
     padding: 10px;

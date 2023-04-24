@@ -34,6 +34,7 @@
 }
 
 .button_img {
+    filter: var(--MenuButtonInvert);
     width: 46px;
     height: 46px;
     transition: 0.4s;
@@ -65,8 +66,6 @@
 
     .button:hover .button_img,
     .buttonActive img {
-        -webkit-filter: invert(100%);
-        filter: invert(100%);
         width: 28px;
         height: 28px;
         transition: 0.4s;

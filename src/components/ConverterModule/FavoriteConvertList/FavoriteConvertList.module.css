@@ -15,7 +15,7 @@
 
 .FavoriteWrapper {
     width: 100%;
-    background: rgba(233, 236, 241, 1);
+    background: var(--ConverterSecondary);
     text-align: center;
     padding-top: 35px;
     border-radius: 25px;
@@ -27,6 +27,7 @@
 .GroupName {
     margin-bottom: 25px;
     font-family: 'Roboto Slab', serif;
+    color: var(--HeaderLogo);
 }
 
 @media (max-width: 500px) {

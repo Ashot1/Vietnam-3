@@ -1,15 +1,16 @@
 import styles from "./Settings.module.css";
 import {memo, useState} from "react";
+import ThemeChanger from "./ThemeChanger/ThemeChanger";
 
 export default function Settings({MenuChangeStyle}) {
 	
 	let content = [
-		{src: '/images/Settings/theme.png', title: 'Theme'},
 		{src: '/images/Settings/table-content.png', title: 'Mobile Menu'},
 	]
 	
 	return (
 		<div className={styles.settings}>
+			<ThemeChanger/>
 			{content.map((item, index) => {
 				return (
 					<SettingButton key={index} item={item}/>

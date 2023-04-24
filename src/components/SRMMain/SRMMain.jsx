@@ -1,6 +1,6 @@
 import styles from './SRMMain.module.css'
 import {motion} from 'framer-motion'
-import {useContext, useEffect, useState} from "react";
+import {memo, useCallback, useContext, useEffect, useState} from "react";
 import {collection, doc, query, updateDoc, where} from "firebase/firestore";
 import {db} from "../../firebase";
 import {useCollectionData} from "react-firebase-hooks/firestore";
@@ -46,6 +46,10 @@ export default function SrmMain({Payday, Credits, setCredits, setPayday}) {
 		}
 	}
 	
+	const PlusCredit = useCallback(() => {
+		setCredits(prev => prev + 1)
+	}, [])
+	
 	return (
 		<>
 			<section className={styles.info}>
@@ -59,15 +63,20 @@ export default function SrmMain({Payday, Credits, setCredits, setPayday}) {
 					Синхронизировать
 				</button>
 			</section>
-			<section className={styles.ButtonWrapper}>
-				<motion.button
-					whileHover={{scale: 1.05}}
-					whileTap={{scale: 0.95}}
-					onClick={() => setCredits(prev => prev + 1)}>
-					<img src="/images/SRM/519rbLb3GhL._AC_SL1499_.jpg" alt=""/>
-				</motion.button>
-			</section>
+			<MainButton PlusCredit={PlusCredit}/>
 		</>
 	);
 }
 
+const MainButton = memo(function MainButton({PlusCredit}) {
+	return (
+		<section className={styles.ButtonWrapper}>
+			<motion.button
+				whileHover={{scale: 1.05}}
+				whileTap={{scale: 0.95}}
+				onClick={PlusCredit}>
+				<img src="/images/SRM/519rbLb3GhL._AC_SL1499_.jpg" alt=""/>
+			</motion.button>
+		</section>
+	)
+})

@@ -22,9 +22,16 @@ export default function App() {
 	}
 	
 	useEffect(() => {
-		if (localStorage.getItem('Mobile Menu') === null || localStorage.getItem('darkmode') === null) {
+		if (localStorage.getItem('Mobile Menu') === null) {
 			localStorage.setItem('Mobile Menu', 'upper')
-			localStorage.setItem('darkmode', 'off')
+			window.location.reload()
+		}
+		if (localStorage.getItem('darkmode') === null) {
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				localStorage.setItem('darkmode', 'on')
+			} else {
+				localStorage.setItem('darkmode', 'off')
+			}
 			window.location.reload()
 		}
 	}, [])

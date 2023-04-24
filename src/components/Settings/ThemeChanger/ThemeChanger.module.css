@@ -1,0 +1,120 @@
+.themeChanger {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, .2);
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 25px 20px 20px 25px;
+}
+
+@media (max-width: 325px) {
+    .themeChanger {
+        width: 90%;
+    }
+}
+
+.themeChanger section:first-child {
+    width: 100%;
+    height: 20px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.themeChanger section:first-child p {
+    margin: 0;
+    color: var(--ThemeChengerPrimary);
+    font-size: 12px;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.PhoneState {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Network {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6.8px 7.2px 6.8px;
+    border-color: transparent transparent var(--ThemeChengerPrimary) transparent;
+    transform: rotate(135deg);
+    margin-top: 5px;
+}
+
+.Battery {
+    width: 20px;
+    height: 10px;
+    background: var(--ThemeChengerPrimary);
+    border-radius: 2px;
+}
+
+.themeChanger section:last-child {
+    margin-top: 10px;
+    height: calc(100% - 30px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    width: 100%;
+    flex: 1 0 auto;
+    display: grid;
+    place-items: center;
+}
+
+.sun {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: .5s;
+    position: relative;
+}
+
+.secondSun {
+    position: absolute;
+    background: var(--ModalWindowBackgroundColor);
+    right: 0;
+    border-radius: 50%;
+}
+
+.bottomMenu {
+    display: grid;
+    place-items: center;
+}
+
+.bottomMenu span {
+    background: rgba(0, 0, 0, 0.11);
+    border-radius: 25px;
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+.ButtonBackground {
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    background: var(--Primary);
+    border-radius: 25px;
+    top: 0;
+    z-index: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
+}
+
+.bottomMenu span button {
+    background: transparent;
+    border: none;
+    font-size: 17px;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 2px;
+    z-index: 1;
+    cursor: pointer;
+    padding: 15px;
+    color: var(--HeaderLogo)
+}

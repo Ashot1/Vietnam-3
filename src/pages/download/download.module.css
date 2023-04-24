@@ -44,12 +44,12 @@
 
 .Download p {
     margin-left: 15px;
-    color: black;
+    color: var(--HeaderLogo);
     font-size: 18px;
 }
 
 .Download:hover > a > p {
-    color: rgba(0, 0, 0, 0.8);
+    color: var(--DownloadHoverTextColor);
     transition: 0.4s;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .Download span {
-    color: rgba(70, 70, 70, 0.795);
+    color: var(--DownloadInfoAboutTextColor);
     font-size: 13px;
     height: 95px;
     margin-top: 1px;

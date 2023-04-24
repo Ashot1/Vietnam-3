@@ -15,16 +15,15 @@
     position: relative;
     height: auto;
     padding-bottom: 15px;
+    filter: var(--CalcBrightnessFilter);
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 24%);
-    height: calc(70px * 5);
     margin-top: 25px;
     justify-content: center;
     height: auto;
-
 }
 
 .Display {

@@ -59,7 +59,7 @@
     width: 100px;
     list-style-type: none;
     padding-left: 15px;
-    background: white;
+    background: var(--Primary);
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
@@ -91,7 +91,7 @@
         width: clamp(220px, 65%, 300px);
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        background: white;
+        background: var(--Primary);
         height: 100%;
         box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
         padding-left: 10px;
@@ -103,7 +103,7 @@
     .MenuBottom > .menuButtons {
         display: flex;
         width: 100%;
-        background: white;
+        background: var(--Primary);
         height: 100%;
         padding-bottom: env(safe-area-inset-bottom);
         border-radius: 0;

@@ -4,7 +4,9 @@ import {useEffect, useMemo, useState} from 'react'
 
 export default function Slider() {
 	
-	const [SlideNumber, setSlideNumber] = useState(0),
+	const [TouchX, setTouchX] = useState(0),
+		[TouchX2, setTouchX2] = useState(0),
+		[SlideNumber, setSlideNumber] = useState(0),
 		image = useMemo(() => [
 			{url: '/images/slider/Подкрадули.jpg'},
 			{url: '/images/slider/Wensday.jpeg'},
@@ -20,7 +22,7 @@ export default function Slider() {
 	
 	// auto-slide
 	useEffect(() => {
-		if (SlideNumber === image.length - 1) setSlideNumber(0)
+		if (SlideNumber >= image.length - 1) setSlideNumber(0)
 		
 		const interval = setInterval(() => {
 			setSlideNumber((SlideNumber) => SlideNumber + 1);
@@ -31,16 +33,22 @@ export default function Slider() {
 	
 	return (
 		<div className={styles.sliderWrapper}>
-			<div id='Slider' className={styles.slider} style={{backgroundImage: `url(${image[SlideNumber].url})`}}>
-			
-			</div>
+			<div id='Slider' className={styles.slider} style={{backgroundImage: `url(${image[SlideNumber].url})`}}
+			     onTouchStart={(e) => setTouchX(e.touches[0].clientX)}
+			     onTouchMove={(e) => {
+				     setTouchX2(TouchX - e.touches[0].clientX > 0 ? SlideNumber + 1 : SlideNumber - 1)
+			     }}
+			     onTouchEnd={() => {
+				     if (!TouchX || 0 === TouchX.length) return;
+				     if (TouchX2 < 0) return setSlideNumber(image.length - 1)
+				     setSlideNumber(TouchX2)
+			     }}></div>
 			<div className={styles.ButtonsWrapper}>
 				<ul className={styles.points}>
 					<Buttons ButtonID={SlideNumber}
 					         ActiveNumber={SlideNumber}
 					         Changes={(value) => setSlideNumber(value)}
-					         image={image}
-					/>
+					         image={image}/>
 				</ul>
 			</div>
 		</div>
@@ -55,7 +63,7 @@ function Buttons({image, Changes, ButtonID}) {
 					key={index}
 					onClick={() => Changes(index)}
 					className={index === image.length - 1 ? null : styles.SliderButton}
-					style={{background: ButtonID === index ? 'black' : 'rgb(179, 179, 179)'}}
+					style={{background: ButtonID === index ? 'var(--HeaderLogo)' : 'var(--SliderUnactiveButtonColor)'}}
 				></li>
 			}
 		))

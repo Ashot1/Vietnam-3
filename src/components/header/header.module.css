@@ -3,10 +3,10 @@
 .header {
     width: max(350px, 55%);
     height: 60px;
-    background: white;
+    background: var(--Primary);
     display: flex;
     flex-direction: row;
-    box-shadow: 0 0 10px rgba(212, 212, 212, 0.815);
+    box-shadow: 0 0 10px var(--HeaderBoxShadow);
     border-radius: 15px;
     user-select: none;
     position: relative;
@@ -44,7 +44,7 @@
 }
 
 .logoName {
-    color: black;
+    color: var(--HeaderLogo);
     text-decoration: none;
     text-transform: uppercase;
     display: flex;
@@ -98,7 +98,7 @@
 .menuburgerActive::before,
 .menuburgerActive::after {
     border: none;
-    background: black;
+    background: var(--BurgerMenuBackground);
     width: 30px;
     height: 2px;
     transition: 0.3s;

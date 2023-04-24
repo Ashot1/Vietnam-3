@@ -12,7 +12,7 @@
 }
 
 .content {
-    background: #efefef;
+    background: var(--ModalWindowBackgroundColor);
     border-radius: 15px;
     overflow: hidden;
 }
@@ -39,6 +39,7 @@
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
+    color: var(--MarkTextColor);
 }
 
 .btnPos:hover {
@@ -50,4 +51,8 @@
 .body {
     height: calc(100% - 50px);
     overflow-y: auto;
+}
+
+.body::-webkit-scrollbar {
+    width: 0;
 }

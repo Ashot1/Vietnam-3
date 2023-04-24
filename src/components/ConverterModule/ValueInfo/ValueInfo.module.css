@@ -1,7 +1,7 @@
 
 .ValueInfo {
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--Secondary);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     cursor: pointer;
@@ -9,7 +9,7 @@
 }
 
 .ValueInfo:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.42);
+    box-shadow: 0 0 10px var(--ConverterValueInfoHoverBoxShadow);
     transition: .4s;
 }
 
@@ -22,11 +22,11 @@
 .NewData {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #1F2937;
     font-size: 25px;
     line-height: 2.5rem;
     font-weight: 700;
     font-family: 'Quicksand', sans-serif;
+    color: var(--HeaderLogo)
 }
 
 .pastData b {
@@ -40,6 +40,7 @@
     height: 20px;
     margin-bottom: -3px;
     opacity: .5;
+    filter: var(--MenuButtonInvert);
 }
 
 @media (max-width: 500px) {
@@ -56,7 +57,7 @@
     font-weight: 700;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: rgba(0, 0, 0, 0.39);
+    color: var(--ConverterPastDataTextColor);
 }
 
 @media (max-width: 500px) {
@@ -90,12 +91,13 @@
     margin: 0;
     font-size: 20px;
     margin-bottom: 5px;
+    color: var(--HeaderLogo);
 }
 
 .ValuteInfo h6 {
     padding: 0;
     margin: 0;
-    color: rgba(0, 0, 0, 0.29);
+    color: var(--BonusListLiBoxShadow);
     font-size: 12px;
     position: absolute;
 }

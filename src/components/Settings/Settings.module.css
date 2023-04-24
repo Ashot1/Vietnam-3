@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 
 .settings {
     width: 100%;
@@ -6,21 +8,20 @@
     display: grid;
     place-items: center;
     justify-content: center;
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: repeat(2, auto);
     gap: 50px;
 }
 
 @media (max-width: 500px) {
     .settings {
-        gap: 15px;
+        gap: 45px;
+        grid-template-columns: repeat(1, auto);
         margin-top: 90px;
     }
 }
 
 @media (max-width: 300px) {
     .settings {
-        grid-template-columns: repeat(2, 100px);
-        grid-row-gap: 15px;
         margin-top: 55px;
     }
 }
@@ -37,28 +38,29 @@
     border-radius: 24px;
     cursor: pointer;
     transition: .2s ease-in-out;
-    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
-    -6px -6px 10px rgba(255, 255, 255, .5),
-    6px 6px 8px rgba(255, 255, 255, .075),
-    6px 6px 10px rgba(0, 0, 0, .15);
+    box-shadow: -6px -6px 14px var(--ParamsBoxShadow1),
+    -6px -6px 10px var(--ParamsBoxShadow2),
+    6px 6px 8px var(--ParamsBoxShadow3),
+    6px 6px 10px var(--ParamsBoxShadow4);
     font-family: 'Dosis', sans-serif;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.52);
+    color: var(--MarkTextColor);
 }
 
+
 .params:hover {
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-    -2px -2px 4px rgba(255, 255, 255, .4),
-    2px 2px 2px rgba(255, 255, 255, .05),
-    2px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: -2px -2px 6px var(--ParamsBoxShadow1),
+    -2px -2px 4px var(--ParamsBoxShadow2),
+    2px 2px 2px var(--ParamsBoxShadow3),
+    2px 2px 4px var(--ParamsBoxShadow4);
 }
 
 .paramsActive {
-    box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .7),
-    inset -5px -5px 4px rgba(255, 255, 255, .5),
-    inset 5px 5px 2px rgba(255, 255, 255, .075),
-    inset 5px 5px 4px rgba(0, 0, 0, .15);
-    color: black;
+    box-shadow: inset -5px -5px 6px var(--ParamsBoxShadow1),
+    inset -5px -5px 4px var(--ParamsBoxShadow2),
+    inset 5px 5px 2px var(--ParamsBoxShadow3),
+    inset 5px 5px 4px var(--ParamsBoxShadow4);
+    color: var(--HeaderLogo);
 }
 
 .paramsActiveImg {
@@ -69,10 +71,10 @@
 }
 
 .paramsActive:hover {
-    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
-    inset -2px -2px 4px rgba(255, 255, 255, .5),
-    inset 2px 2px 2px rgba(255, 255, 255, .075),
-    inset 2px 2px 4px rgba(0, 0, 0, .15);
+    box-shadow: inset -2px -2px 6px var(--ParamsBoxShadow1),
+    inset -2px -2px 4px var(--ParamsBoxShadow2),
+    inset 2px 2px 2px var(--ParamsBoxShadow3),
+    inset 2px 2px 4px var(--ParamsBoxShadow4);
 }
 
 .paramsImg {
@@ -80,18 +82,4 @@
     height: 30px;
     width: 30px;
     opacity: .6;
-}
-
-.params:nth-child(1) img {
-    margin-top: 5px;
-    margin-bottom: -5px;
-    height: 40px;
-    width: 40px;
-}
-
-.params:nth-child(3) img {
-    margin-top: 5px;
-    margin-bottom: -5px;
-    height: 40px;
-    width: 40px;
 }

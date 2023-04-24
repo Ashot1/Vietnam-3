@@ -18,6 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--HeaderLogo);
+
 }
 
 .CreateMarksModal section form {
@@ -63,7 +65,7 @@
     font-size: 17px;
     font-family: 'Prompt', sans-serif;
     background: rgba(0, 0, 0, 0.11);
-    color: black;
+    color: var(--MarkTextColor);
     font-weight: 600;
     margin-bottom: 100px;
 }
