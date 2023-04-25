@@ -54,7 +54,7 @@ const AccountLogo = memo(function AccountLogo({setSettingsState}) {
 	
 	return (
 		<button className={styles.settingsButton} onClick={setSettingsState}>
-			<img src={Logo} alt="" style={{borderRadius: '50%'}}/>
+			<img src={Logo} alt="" style={{filter: User ? '' : ' var(--MenuButtonInvert)'}}/>
 		</button>
 	)
 })

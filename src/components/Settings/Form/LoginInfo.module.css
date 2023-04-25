@@ -69,21 +69,21 @@
 }
 
 .box:hover:before {
-    border-color: #262626;
+    border-color: var(--LoginButtonBorderColor);
     height: 100%;
     transform: translateX(0);
     transition: .2s transform linear, .2s height linear .2s;
 }
 
 .box:hover:after {
-    border-color: #262626;
+    border-color: var(--LoginButtonBorderColor);
     height: 100%;
     transform: translateX(0);
     transition: .2s transform linear, .2s height linear .3s;
 }
 
 .button {
-    color: black;
+    color: var(--HeaderLogo);
     text-decoration: none;
     cursor: pointer;
     outline: none;
@@ -92,9 +92,9 @@
 }
 
 .image {
-    width: 25px;
-    height: 25px;
-    margin-left: 10px;
+    width: 22px;
+    height: 22px;
+    margin-left: 15px;
 }
 
 .photoImage {
@@ -112,7 +112,7 @@
     align-items: center;
     border: none;
     border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 3px var(--MarkHoverColor);
     background: #e62222;
     position: relative;
     margin-top: 25px;

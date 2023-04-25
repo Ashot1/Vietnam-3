@@ -3,36 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fb7ee65d-5bf4-4a89-8a26-59a242d20540" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CalculatorModule/CalculatorModule.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CalculatorModule/CalculatorModule.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Console/Console.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Console/Console.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/Converter/Converter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/FavoriteConvertList/FavoriteConvertList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/FavoriteConvertList/FavoriteConvertList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConverterModule/ValueInfo/ValueInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/CreateMarkForm/CreateMarkForm.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/EditModeInfo/EditModeInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/EditModeInfo/EditModeInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/Mark/MarkMenu/MarkMenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NeedAccountMessage/NeedAccountMessage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NeedAccountMessage/NeedAccountMessage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMBonus/SRMBonus.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SRMMain/SRMMain.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalWindow/modalWindow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Selector/Selector.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Selector/Selector.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/WaveButton/WaveButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/WaveButton/WaveButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MarksList/MarksList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarksList/MarksList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Form/LoginInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Form/LoginInfo.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculator/calculator.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/ButtonMenu/MenuLinkButtons.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/ButtonMenu/MenuLinkButtons.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider/slider.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/slider.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SRM/SRMPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SRM/SRMPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/calculator/calculatorPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/download/download.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/download/download.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/todo/todo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/todo.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/components/calculator/calculator.module.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -64,24 +45,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tltxd/Desktop/Vietnam-3/src/components/preloader&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\tltxd\\Desktop\\Vietnam-3\\public&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Programs\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tltxd/Desktop/Vietnam 3/app/node_modules/.bin/autoprefixer",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\tltxd\\Desktop\\Vietnam-3\\public",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "ts.external.directory.path": "C:\\Programs\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="true" />
+        <entry key="com.haulmont.rcb.reactInspector" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tltxd\Desktop\Vietnam-3\src\components\preloader" />
@@ -220,7 +210,17 @@
       <workItem from="1682243879705" duration="69000" />
       <workItem from="1682243964813" duration="18588000" />
       <workItem from="1682336885958" duration="7566000" />
-      <workItem from="1682350969637" duration="8555000" />
+      <workItem from="1682350969637" duration="8698000" />
+      <workItem from="1682362447004" duration="54000" />
+      <workItem from="1682411923298" duration="360000" />
+      <workItem from="1682412296448" duration="1010000" />
+      <workItem from="1682413405518" duration="117000" />
+      <workItem from="1682413534990" duration="1290000" />
+      <workItem from="1682414848480" duration="250000" />
+      <workItem from="1682415111310" duration="220000" />
+      <workItem from="1682415344473" duration="374000" />
+      <workItem from="1682415732415" duration="1578000" />
+      <workItem from="1682417354226" duration="1966000" />
     </task>
     <servers />
   </component>

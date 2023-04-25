@@ -66,6 +66,8 @@ body::-webkit-scrollbar-thumb {
     --ConverterSecondary: rgb(233, 236, 241);
     --ConverterValueInfoHoverBoxShadow: rgba(255, 255, 255, 0.42);
     --ConverterPastDataTextColor: rgba(0, 0, 0, 0.39);
+
+    --LoginButtonBorderColor: #262626;
 }
 
 :root[data-theme="on"] {
@@ -99,4 +101,6 @@ body::-webkit-scrollbar-thumb {
     --ConverterSecondary: rgb(112, 112, 126);
     --ConverterValueInfoHoverBoxShadow: rgba(45, 45, 45, 1);
     --ConverterPastDataTextColor: rgba(255, 255, 255, 0.29);
+
+    --LoginButtonBorderColor: #545454;
 }
