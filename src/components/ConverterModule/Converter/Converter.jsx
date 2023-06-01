@@ -107,7 +107,7 @@ function DisplayInfo(props) {
 				<span>
 					<h3>{title}</h3>
 					<motion.i className={styles.Arrow}
-					          initial={{rotate: IsOpened ? 180 : 0}}
+					          initial={{rotate: IsOpened ? 180 : 0}}  
 					          animate={{rotate: IsOpened ? 0 : 180}}></motion.i>
 				</span>
 				<p>{fullTitle}</p>

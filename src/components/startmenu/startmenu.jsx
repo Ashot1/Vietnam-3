@@ -10,6 +10,7 @@ export default function StartMenu(props) {
 		{Count: 3, link: 'Calculator', background: '/images/StartMenu/calculator_icon.png', text: 'Calculator'},
 		{Count: 4, link: 'Download', background: '/images/StartMenu/download.jpeg', text: 'Download'},
 		{Count: 5, link: 'Todo', background: '/images/StartMenu/list.jpg', text: 'Todo list'},
+		{Count: 6, link: 'https://calculator-2-theta.vercel.app/', background: '/images/StartMenu/Хуйня4.png', text: 'V-Calculator 2'},
 		{
 			Count: 7,
 			link: 'https://tvoyotec.github.io/Vietnam2/index.html',
@@ -17,7 +18,7 @@ export default function StartMenu(props) {
 			text: 'Vietnam 2'
 		},
 		{
-			Count: 6,
+			Count: 8,
 			link: 'https://vietnamcorp.github.io/VietnamCorp/',
 			background: '/images/StartMenu/Vietnam1.png',
 			text: 'Vietnam 1'
@@ -31,6 +32,7 @@ export default function StartMenu(props) {
 						key={item.Count}
 						to={item.link}
 						className={styles.Block}
+						target={item.link.split('://')[0] === 'https' ? "_blank" : "_self"}
 					>
 						<p>{item.text}</p>
 						<span className={styles.BlockCover}

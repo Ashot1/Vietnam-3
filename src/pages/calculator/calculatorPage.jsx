@@ -2,6 +2,7 @@ import styles from './calculatorPage.module.css'
 import {memo} from "react";
 import AnimatedMain from "../../components/AnimatedMain/AnimatedMain";
 import {Link, Navigate, Outlet, useLocation, useMatch} from "react-router-dom";
+import Notification from "../../components/Notification/Notification";
 
 export default memo(function CalculatorPage(props) {
 	
@@ -12,6 +13,7 @@ export default memo(function CalculatorPage(props) {
 	return (
 		<AnimatedMain mainstyles={styles.main}>
 			<div className={styles.content}>
+				<Notification url="https://calculator-2-theta.vercel.app/" text="Новый калькулятор и конвертер"/>
 				<Menu/>
 				<Outlet/>
 			</div>
