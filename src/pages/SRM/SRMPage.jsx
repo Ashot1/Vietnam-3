@@ -1,5 +1,3 @@
-// import styles from './SRM.module.css'
-
 import PrivatePage from "../../hoc/PrivatePage";
 import styles from "./SRM.module.css"
 import AnimatedMain from "../../components/AnimatedMain/AnimatedMain";
