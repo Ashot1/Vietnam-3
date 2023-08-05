@@ -10,26 +10,27 @@ export default function StartMenu(props) {
 		{Count: 3, link: 'Calculator', background: '/images/StartMenu/calculator_icon.png', text: 'Calculator'},
 		{Count: 4, link: 'Download', background: '/images/StartMenu/download.jpeg', text: 'Download'},
 		{Count: 5, link: 'Todo', background: '/images/StartMenu/list.jpg', text: 'Todo list'},
+		{Count: 6, link: 'https://weather-app-murex-seven-66.vercel.app/', background: '/images/StartMenu/icon-weather.png', text: 'Weather'},
 		{
-			Count: 6,
+			Count: 7,
 			link: 'https://calculator-2-theta.vercel.app/',
 			background: '/images/StartMenu/Хуйня4.png',
 			text: 'V-Calculator 2'
 		},
 		{
-			Count: 7,
+			Count: 8,
 			link: 'https://messenger-pink-nine.vercel.app/',
 			background: '/images/StartMenu/messenger.png',
 			text: 'Messenger'
 		},
 		{
-			Count: 8,
+			Count: 9,
 			link: 'https://tvoyotec.github.io/Vietnam2/index.html',
 			background: '/images/StartMenu/Vietnam2.png',
 			text: 'Vietnam 2'
 		},
 		{
-			Count: 9,
+			Count: 10,
 			link: 'https://vietnamcorp.github.io/VietnamCorp/',
 			background: '/images/StartMenu/Vietnam1.png',
 			text: 'Vietnam 1'
